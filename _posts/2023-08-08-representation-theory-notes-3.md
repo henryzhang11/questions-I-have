@@ -3,4 +3,4 @@ title: "representation theory note 3"
 date: 2023-08-08
 ---
 
-We have $\oplus_V \mathbb{Z}_{\chi_V}=\mathbb{Z}$
+Let $v_\mu$ be a vector with weight $\mu$, that is $t\cdot v_\mu=t^\mu v_\mu$ for $t\in T$, the maximal torus of $U(n)$. Such a $v_\mu$ definitely exists within an infinite dimensional representation of $U(n)$. 
