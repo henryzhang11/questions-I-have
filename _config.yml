@@ -18,23 +18,3 @@ header_pages:
    - _pages/misc.md
 disqus:
     shortname: website-11
-theme: minima
-github: [metadata]
-title: boris babenko, phd
-encoding: UTF-8
-permalink: /:title/
-markdown: kramdown
-include: ['_pages']
-collections:
-  post_drafts:
-    output: true
-# gems:
-#    - jekyll-coffeescript
-#    - jekyll-paginate
-exclude:
-   - README.md
-header_pages:
-   - _pages/pubs.md
-   - _pages/misc.md
-disqus:
-    shortname: website-11
