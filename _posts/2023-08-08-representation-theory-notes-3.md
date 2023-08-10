@@ -8,3 +8,5 @@ Let $v_\mu$ be a vector with weight $\mu$, that is $t\cdot v_\mu=t^\mu v_\mu$ fo
 $$
 \mathfrak{gl}(n)\supset \mathfrak{u}(n)
 $$
+
+another equation.
