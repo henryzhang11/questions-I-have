@@ -1,10 +1,2 @@
-# Build settings
-markdown: kramdown
 theme: minima # or any other theme you're using
-plugins:
-  - jekyll-feed
-  
-# Kramdown settings (for markdown processing with LaTeX support via MathJax)
-kramdown:
-  input: GFM # GitHub Flavored Markdown
-  math_engine: mathjax
+mathjax: true
