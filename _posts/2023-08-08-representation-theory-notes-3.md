@@ -11,3 +11,5 @@ Let \\(v_\mu\\) be a vector with weight $\mu$, that is $t\cdot v_\mu=t^\mu v_\mu
 \\[\mathfrak{gl}(n)\supset \mathfrak{u}(n)\\]
 
 another equation.
+
+>>>>>>> d59a3cd313949301df9c118950b9bcd2655257d2
