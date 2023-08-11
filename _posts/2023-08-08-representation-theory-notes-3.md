@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "representation theory note 3"
 date: 2023-08-08
 ---
