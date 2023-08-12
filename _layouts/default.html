@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Site title and description -->
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+
+    <!-- Stylesheets and favicon -->
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ "/favicon.png" | relative_url }}">
+
+    <!-- Optional: custom head content. Remove if not needed. -->
+    {% if site.custom_head %}
+    {% include custom-head.html %}
+    {% endif %}
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <!-- Your navigation items here -->
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Your footer content here -->
+    </footer>
+
+</body>
+
+</html>
