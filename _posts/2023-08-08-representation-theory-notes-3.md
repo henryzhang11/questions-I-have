@@ -14,4 +14,5 @@ Display:
 
 another display: 
 $$a^2 + b^2 = c^2$$
+
 some texts
