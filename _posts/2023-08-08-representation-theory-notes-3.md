@@ -7,7 +7,7 @@ Here's some text.
 
 Here's a math equation:
 
-Inline: \( a^2 + b^2 = c^2 \)
+Inline: \\( a^2 + b^2 = c^2 \\)
 
 Display:
-\[ E = mc^2 \]
+\\[ E = mc^2 \\]
