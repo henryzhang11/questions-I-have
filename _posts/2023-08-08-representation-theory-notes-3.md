@@ -1,11 +1,7 @@
 ---
 layout: default
-title: "Your Post Title"
+title: "representation theory notes 3"
 ---
-
-Here's some text.
-
-Here's a math equation:
 
 Inline: $a^2 + b^2 = c^2$
 
