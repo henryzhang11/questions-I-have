@@ -1,6 +1,12 @@
 ---
-layout: index
+layout: default
 title: Home
 ---
 
-Feel free to explore and connect with me if you have any questions!
+# Welcome to my blog!
+
+Here are my posts:
+
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url }})
+{% endfor %}
