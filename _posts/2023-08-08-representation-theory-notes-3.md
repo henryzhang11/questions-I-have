@@ -14,3 +14,5 @@ display:
 $$a^2 + b^2 = c^2$$
 
 some texts
+
+test display $$a^2 + b^2 = c^2$$ some texts
