@@ -1,12 +1,13 @@
 ---
-layout: post
-title: "representation theory notes 3"
-date: 2023-08-08
+layout: default
+title: "Your Post Title"
 ---
 
+Here's some text.
 
-Let \\(v_\mu\\) be a vector with weight $$\mu$$, that is \(t\cdot v_\mu=t^\mu v_\mu\) for $t\in T$, the maximal torus of $U(n)$. Such a $v_\mu$ exists within an infinite dimensional representation of 
+Here's a math equation:
 
-\\[\mathfrak{gl}(n)\supset \mathfrak{u}(n)\\]
+Inline: \( a^2 + b^2 = c^2 \)
 
-another equation.
+Display:
+\[ E = mc^2 \]
