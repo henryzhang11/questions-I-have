@@ -15,6 +15,6 @@ Here are my posts:
 
 <ul class="posts">
 {% for post in site.posts %}
-   [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
+ -[{{ post.title }}]({{ site.baseurl }}{{ post.url }})
 {% endfor %}
 </ul>
