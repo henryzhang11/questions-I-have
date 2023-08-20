@@ -13,8 +13,10 @@ Here are my posts:
 {% endfor %}
 </ul>
 
-<ul class="posts">
 {% for post in site.posts %}
- -[{{ post.title }}]({{ site.baseurl }}{{ post.url }})
+   [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
 {% endfor %}
-</ul>
+
+{% for post in site.posts %}
+ - [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
+ {% endfor %}
