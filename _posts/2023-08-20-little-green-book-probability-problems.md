@@ -16,3 +16,4 @@ $$
 \end{pmatrix}
 $$
 
+By decomposing $v=(0,1,0,0)$ as the sum of the eigenvectors $v=\lambda_1v(1,0,0,0)+\lambda_2v_2+\lambda_3v_3+\lambda_4(0,0,0,1)$ of the above matrix, we have that $M$ wins with probability $\lambda_1$. 
