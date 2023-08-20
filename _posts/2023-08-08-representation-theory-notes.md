@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "representation theory notes 3"
+title: "representation theory notes"
 ---
 
 Inline: $a^2 + b^2 = c^2$
