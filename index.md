@@ -18,5 +18,5 @@ Here are my posts:
 {% endfor %}
 
 {% for post in site.posts %}
- - [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
- {% endfor %}
+  <div><a href="{{ post.url }}">{{ post.title }}</a></div>
+{% endfor %}
