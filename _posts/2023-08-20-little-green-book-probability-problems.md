@@ -20,7 +20,7 @@ By the equation for absorption probability, let $a_i$ be the probability of reac
 
 Consider a probability $p$ instead of $1/3$, we have the equations $a_2=(1-p)a_3$ and $a_3=pa_2+(1-p)$. So, $a_3=\frac{1-p}{1-p(1-p)}$ and $a_2=\frac{(1-p)^2}{1-p(1-p)}$.
 
-Let the transition matrix be $T$ and the vector of probability of reaching state $1$ be $A$, then $T^tA=A$. We also have that the first entry of $A$ is $1$ and the last entry is $0$. 
+Let the transition matrix be $T$ and the vector of probability of reaching state $1$ be $A$, then $T^tA=A$. We also want a solution with first entry of $A$ being $1$ and the last entry being $0$. Such a vector exists because the probabilistic meaning of the vector (the probability of reaching an absorption state starting from a given state). The existence could also be seen by acting on $I=(0,...,0,1,0,...,0)$ (the $i_1$th entry is $1$ and all other entries are $0$) with $T^t$. Suppose the Markov process described by transition matrix $T$ has absorbing states $i_1, ,...i_k$, then $(T^t)^nI$s are $0$ on the $i_2,...,i_k$th entries. The sequence $(T^t)^nI$ also converges due to Brower's fixed point theorem, thereby proving our theorem. I suspect there must be an algebraic proof that such a vector (a vector that's $1$ on the $i_1$th entry, $0$ on $i_2,...i_k$th entry, and satisfies $T^tv=v$) exists but couldn't find it. 
 
 2 
 
