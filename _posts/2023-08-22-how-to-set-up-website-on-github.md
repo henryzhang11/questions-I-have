@@ -5,6 +5,7 @@ title: how to set up blog on github that processes Latex code
 
 1. Create a new Github repository following the link https://docs.github.com/en/get-started/quickstart/create-a-repo
 2. Create /_layouts/default.html;
+
    ```
    <!DOCTYPE html>
    <html>
@@ -41,6 +42,7 @@ title: how to set up blog on github that processes Latex code
    </body>
    </html>
    ```
+
 4.
 5. /_layouts/post.html; /_posts
 /2023-08-22-my-first-post.md;.gitignore;_config.yml;index.md
