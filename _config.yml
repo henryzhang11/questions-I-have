@@ -12,3 +12,5 @@ markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
+  auto_ids: false
+  entity_output: as_char
