@@ -17,3 +17,7 @@ We have $\oplus_V\mathbb{Z}_{\chi_V}=\mathbb{Z}[t_i^{\pm 1}]^{\text{Weil group}}
 **Corollary 1.2** In principle, we concompute $\chi_V(t)$ by Gram-Schmidt following the formulas $(\chi_{V^\mu}(t),\chi_{V^\mu}(t))_{L^2(G)}=0$ for $\nu<\mu$. 
 
 Since $SU(2)$ is a $3$-sphere and $T_{SU(2)}$ is a big circle on $SU(2)$ we have $L^2(SU(2)^{\text{conjugation}})=L^2(T,sin^2\phi d\phi)=L^2(T,\frac{1}{w}(1-z^2)(1-\overline{z}^2)\frac{dz}{2\pi iz})$. 
+
+**Theorem** (Weyl Integration Formula) Given a compact Lie group $G$, a conjugation-constant function $f$ ($f(g^{-1}hg)=f(h)$), the Harr measure $\mu$ on $G$, the maximal torus $T$ of $G$, the Weyl group $W=N(T)/T$, we have $$\int_G fd\mu=\frac{1}{|W|}\int_Tf(t)\prod_{\text{roots }\alpha}}(t^\alpha-1)\frac{dt}{2\pi i t}$$. 
+
+**Proof:** We consider the map $c: G/T\times T\to G$ defined as $c(g, t)=gtg^{-1}$. Locally this map is a homeomorphism and 
