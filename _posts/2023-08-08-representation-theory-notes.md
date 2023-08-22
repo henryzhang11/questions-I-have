@@ -4,7 +4,7 @@ title: "representation theory notes"
 ---
 
 
-We have $\oplus_V\mathbb{Z}_{\Chi_V}=\mathbb{Z}[t_i^{\pm 1}]^{\text{Weil group}}$ for $U(n)$ due to the following theorem:
+We have $\oplus_V\mathbb{Z}_{\chi_V}=\mathbb{Z}[t_i^{\pm 1}]^{\text{Weil group}}$ for $U(n)$ due to the following theorem:
 
 **Theorem 3.1** For any dominant weight $\mu$ of $U(n)$, there exists $V^\mu$ so that $\chi_{V^\mu}(t)=t^\mu+\sum_{\text{\eta\in\text{cone of negative roots}}}k_{\eta}t^{\mu+\eta}$.
 
