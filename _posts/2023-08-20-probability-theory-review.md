@@ -67,7 +67,7 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 **Theorem** $P(X\in A|Y=y)=\int_Af_{X|Y}(x|y)dx$. 
 
 **Problem** Suppose that $X$ and $Y$ are independent and have the common density function of $e^{-x}$ for $x \>\ 0$ and $0$ otherwise. What's the density function of $X/Y$? 
-**Solution** We first work out the CDF of $X/Y$: $X/Y \<\ a$ iff $X \<\ Ya$. Since $X$ and $Y$ are independent, $F(a)=P(X \<\ Ya)=\int_0^\infty\int_0^{ya} e^{-x}dxe^{-y}dy=\int_0^\infty(1-e^{-ya})e^{-y}dy=1-\int_0^\inftye^{-y(a+1)}dy=1-\frac{1}{a+1}=\frac{a}{a+1}$. So, the PDF of $X/Y$ is $\frac{dF){da}=\frac{1}{(a+1)^2}$. 
+**Solution** We first work out the CDF of $X/Y$: $X/Y \<\ a$ iff $X \<\ Ya$. Since $X$ and $Y$ are independent, $F(a)=P(X \<\ Ya)=\int_0^\infty\int_0^{ya} e^{-x}dxe^{-y}dy=\int_0^\infty(1-e^{-ya})e^{-y}dy=1-\int_0^\infty e^{-y(a+1)}dy=1-\frac{1}{a+1}=\frac{a}{a+1}$. So, the PDF of $X/Y$ is $\frac{dF}{da}=\frac{1}{(a+1)^2}$. 
 
 **Theorem** If $X$ and $Y$ have joint density $f$, then $E[g(x,y)]=\int_{\mathbb{R}^2}fgdxdy$. 
 
