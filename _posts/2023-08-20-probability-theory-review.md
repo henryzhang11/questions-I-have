@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Little green book probability problems"
+title: "probability theory review"
 ---
 
 __1__ Player $M$ has 1 dollar and player $N$ has 2 dollars. Each game gives the winner 1 from the other. As a better player, $M$ wins $2/3$ of the games. They play until one of them is bankrupt. What is the probability that $M$ wins?
@@ -45,6 +45,33 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 **Chebyshev's inequality** We have $P(|X-\overline{X}|\geq k\sigma)\leq \frac{1}{k^2}$. 
 
 **Theorem** For a normal distribution $\mathcal{N}$, $P(|X-\overline{X}|\leq s)\geq 0.68$, $P(|X-\overline{X}|\leq 2s)\geq 0.95$, and $P(|X-\overline{X}|\leq 3s)\geq 0.997$. 
+
+**Definition** $r=\frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{(n-1)s_xs_y}$. When $r>0$, we say the sample data pairs are positively correlated and we say the sample data pairs are negatively correlated when $r<0$. 
+
+**Theorem** We have $-1\leq r\leq 1$ and $|r|=1$ iff $(x_i,y_i)$ lie on a straight line, with $r=1$ iff the line has positive slope and $r=-1$ iff the line has negative slope. Suppose $x_i$ and $y_i$ have correlation coefficient $r$, then $a+bx_i$ and $c+dy_i$ have correlation coefficient $r$ if $bd>0$ and $-r$ if $bd<0$. 
+
+**Definition** $A_1,...,A_n$ are independent if for $I\subset\{1,...,n\}$, we have $P(\cap_{i\in I} A_i)=\prod_{i\in I} P(A_i)$. 
+
+**Theorem** We have $A_1,...,A_n$ are independent iff $1_{A_1},...,1_{A_n}$ are independent iff $A_1^c,A_2,...,A_n$ are independent. Here $X_1,...,X_n$ are independent iff $\sigma(X_1),...,\sigma(X_n)$ are independent iff for $A_i\in\sigma(X_i)$, $P(\cap A_i)=\prod_i P(A_i)$.
+
+**Theorem** If $X_1,...,X_n$ are independent and $X_i$ has distribution $\mu_i$, then $(X_1,...,X_n)$ has distribution $\mu_1\times ...\times \mu_n$. 
+
+**Definition** The joint cumulative probability distribution function of $X$ and $Y$ is $F(x,y)=P(\{X\leq x, Y\leq y\}$.
+
+**Definition** $X$ and $Y$ are jointly continuous if there is $f(x,y)$ so that $P((X,Y)\in C)=\int_C f(x,y)dxdy$. 
+
+**Theorem** If $X$ and $Y$ have joint probability density function $f(x,y)$, then $f(a,b)=\frac{\partial^2 F(a,b)}{\partial a\partial b}$ and $f_X(x)=\int_\mathbb{R}f(x,y)dy$. If in addition $X$ and $Y$ are independent, then $f(x,y)=f_X(x)f_Y(y)$. (I wonder if the discusion of jointly continuity could begin by defining $f(a,b)=\frac{\partial^2 F(a,b)}{\partial a\partial b}$?)
+
+**Definition** Suppose $X$ and $Y$ have joint probability density function $f(x,y)$, then the conditional probability density function of $X$ given $Y=y$ (when $f_Y(y)>0$) is $f_{X|Y}(x|y)=\frac{f(x,y)}{f_Y(y)}$. (I wonder what's a measure theoretic interpretation of this expression. I couldn't find one because it seems the event $Y=y$ has measure $0$.)
+
+**Theorem** $P(X\in A|Y=y)=\int_Af_{X|Y}(x|y)dx$. 
+
+**Problem** Suppose that $X$ and $Y$ are independent and have the common density function of $e^{-x}$ for $x>0$ and $0$ otherwise. What's the density function of $X/Y$? 
+**Solution** We first work out the CDF of $X/Y$: $X/Y<a$ iff $X<Ya$. Since $X$ and $Y$ are independent, $F(a)=P(X<Ya)=\int_0^\infty\int_0^{ya} e^{-x}dxe^{-y}dy=\int_0^\infty(1-e^{-ya})e^{-y}dy=1-\int_0^\inftye^{-y(a+1)}dy=1-\frac{1}{a+1}=\frac{a}{a+1}$. So, the PDF of $X/Y$ is $\frac{dF){da}=\frac{1}{(a+1)^2}$. 
+
+**Theorem** If $X$ and $Y$ have joint density $f$, then $E[g(x,y)]=\int_{\mathbb{R}^2}fgdxdy$. 
+
+
 
 
 
