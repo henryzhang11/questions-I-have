@@ -73,6 +73,53 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 
 **Theorem** Properties of covariance: 1. $cov(X,Y)=E(XY)-(EX)(EY)$; 2. $cov(Y,X)=cov(X,Y)$; 3. $cov(X,X)=Var(X)$; 4. $cov(aX,Y)=acov(X,Y)$; 5. $cov(\sum_iX_i,\sum_j Y_j)=\sum_{i,j}cov(X_i,Y_j)$.
 
+**Definition** $Corr(X,Y)=\frac{cov(X,Y)}{s_xs_y}$. 
+
+**Definition** The moment generating function of $X$ is $\phi(t)=E[e^{tX}]$.
+
+**Theorem** We have the following properties of moment generating functions: 1. $\phi^{(n)}(t)=E[X^ne^{tX}]$, so $\phi^{(n)}(0)=E[X^n]$; 2. the moment generating function of independent random variables are the product of the individual moment generating functions;
+
+**Theorem** (Markov’s inequality) We have $P(X>a)\leq \frac{E[X]}{a}$.
+
+**Problem** Suppose that it is known that the number of items produced in a factory during a week is a random variable with mean 50. (a)  What can be said about the probability that this week’s production will exceed 75? (b)  If the variance of a week’s production is known to equal 25, then what can be said about the probability that this week’s production will be between 40 and 60?  
+**Solution** (a) By Markov’s inequality, $P(X>75)\leq \frac{E[X]}{75}=2/3$. (b) By Chebyshev’s inequality, $P(X\in[40,60])=1-P(X\notin[40,60])\geq 1-\frac{\sigma^2}{k^2}=1-\frac{25}{10^2}=\frac{3}{4}$. 
+
+**Theorem** Let $X_i$ be iid random variables with mean $\mu$, then $E[|\frac{S_n}{n}-\mu |>\epsilon]\to 0$ as $n\to\infty$. 
+
+**Binomial distribution** $P(X=i)=\(\binom{i}{n}\) p^i(1-p)^{n-i}$. 
+
+**Poisson distribution** $P(X=i)=e^{-\lambda}\frac{\lambda^2}{i!}$ approximates the number of successful binomial trials given that $n$ is large and $p$ is small. For instance, $Poisson_np$ approximates the number of misprinted alphabets on a page of a book with $n$ (which is large) characters and $p$ probability of having a wrong character. Poisson random variable has moment generating function $\phi(t)=exp\{\lambda(e^t-1)\}$, which give $E[X]=\lambda$ and $Var[X]=\lambda$.  The sum of independent $Poisson(\lambda_1)$ and $Poisson(\lambda_2)$ is a new Poisson random variable $Poisson(\lambda_1+\lambda_2)$. 
+
+**Problem** Suppose that the average number of accidents occurring weekly on a particular stretch of a highway equals 3. Calculate the probability that there is at least one accident this week. 
+**Solution** We model this as a Poisson distribution with $\lambda=3$ and we have $P(X\geq 1)=1-P(X=0)=1-e^{-\lambda}\frac{\lambda^i}{i!}=1-e^{-3}\frac{3^0}{0!}=1-e^{-3}$. 
+
+**Theorem** If each of a Poisson number of events having mean $\lambda$ is independently classified as being of one of the types $1,…,r$ with respective probabilities $p_1,…,p_r$, $r_i=1$, $\sum_{i=1}^rp_i =1$ , then the numbers of type $1, . . . ,r$ events are independent Poisson random variables with respective means $λp_1,…,λp_r$.
+
+**Theorem** If $X$ is Poisson with mean $\lambda$, then $\frac{P(X=i+1)}{P(X=i)}=\frac{\lambda}{i+1}$. ($P(X=1)=\lambdaP(X=0)$, $P(X=2)=\frac{\lambda}{2}P(X=1)$, $P(X=3)=\frac{\lambda}{3}P(X=2)$, ….
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
