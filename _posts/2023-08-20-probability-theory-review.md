@@ -71,6 +71,9 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 
 **Theorem** If $X$ and $Y$ have joint density $f$, then $E[g(x,y)]=\int_{\mathbb{R}^2}fgdxdy$. 
 
+**Theorem** Properties of covariance: 1. $cov(X,Y)=E(XY)-(EX)(EY)$; 2. $cov(Y,X)=cov(X,Y)$; 3. $cov(X,X)=Var(X)$; 4. $cov(aX,Y)=acov(X,Y)$; 5. $cov(\sum_iX_i,\sum_j Y_j)=\sum_{i,j}cov(X_i,Y_j)$.
+
+
 
 
 
