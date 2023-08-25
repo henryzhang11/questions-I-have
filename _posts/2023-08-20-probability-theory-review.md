@@ -97,7 +97,7 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 
 **Theorem** If $X$ is Poisson with mean $\lambda$, then $\frac{P(X=i+1)}{P(X=i)}=\frac{\lambda}{i+1}$. ($P(X=1)=\lambda P(X=0)$, $P(X=2)=\frac{\lambda}{2}P(X=1)$, $P(X=3)=\frac{\lambda}{3}P(X=2)$, ….
 
-**Definition** We have an urn filled with $N$ good and $M$ bad samples and hypergeometric distribution calculates probability of getting $i$ good samples during a random draw of $n$ samples from the urn: $P(X=i)=\frac{\(\binom{n}{i}\)\(\binom{m}{n-i}\)}{\(\binom{N+M}{n}\)}$.
+**Definition** We have an urn filled with $N$ good and $M$ bad samples and hypergeometric distribution calculates probability of getting $i$ good samples during a random draw of $n$ samples from the urn: $P(X=i)=\frac{\binom{n}{i}\binom{m}{n-i}}{\binom{N+M}{n}}$.
  
 
 
