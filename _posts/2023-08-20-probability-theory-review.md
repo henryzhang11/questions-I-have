@@ -98,6 +98,12 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 **Theorem** If $X$ is Poisson with mean $\lambda$, then $\frac{P(X=i+1)}{P(X=i)}=\frac{\lambda}{i+1}$. ($P(X=1)=\lambda P(X=0)$, $P(X=2)=\frac{\lambda}{2}P(X=1)$, $P(X=3)=\frac{\lambda}{3}P(X=2)$, ….
 
 **Definition** We have an urn filled with $N$ good and $M$ bad samples and hypergeometric distribution calculates probability of getting $i$ good samples during a random draw of $n$ samples from the urn: $P(X=i)=\frac{\binom{n}{i}\binom{m}{n-i}}{\binom{N+M}{n}}$.
+
+**Theorem** For hypergeometric distributions, let $p=\frac{N}{N+M}$, then $E[X]=np$ and $Var[X]=np(1-p)[1-\frac{n-1}{N+M-1}]$.
+
+**Definition** We write $X\sim \mathcal{N}(\mu,\sigma^2)$ if its density is $f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{-(x-\mu)^2/2\sigma^2}$ for $-\infty<x<\infty$. We write $Z=\mathcal{N}(0,1)$ and $\Phi(x)=P(Z<x)$. 
+
+**Theorem** For $X\sim\mathcal{N}(\mu,\sigma^2)$, $E[X]=\mu$, $var(X)=\sigma^2$, $Y=aX+b\sim \mathcal{N}(a\mu +b, a^2\sigma^2)$, i.i.d. $X_i\sim\mathcal{N}(\mu_i,\sigma_i^2)$ sums to $\mathcal{N}(\sum_{i}\mu_i,\sum_i\sigma_i^2)$. 
  
 
 
