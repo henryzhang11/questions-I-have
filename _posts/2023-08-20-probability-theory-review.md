@@ -88,22 +88,25 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 
 **Binomial distribution** $P(X=i)=\(\binom{i}{n}\) p^i(1-p)^{n-i}$. 
 
-**Poisson distribution** $P(X=i)=e^{-\lambda}\frac{\lambda^2}{i!}$ approximates the number of successful binomial trials given that $n$ is large and $p$ is small. For instance, $Poisson_np$ approximates the number of misprinted alphabets on a page of a book with $n$ (which is large) characters and $p$ probability of having a wrong character. Poisson random variable has moment generating function $\phi(t)=exp\{\lambda(e^t-1)\}$, which give $E[X]=\lambda$ and $Var[X]=\lambda$.  The sum of independent $Poisson(\lambda_1)$ and $Poisson(\lambda_2)$ is a new Poisson random variable $Poisson(\lambda_1+\lambda_2)$. 
+**Poisson distribution** $P(X=i)=e^{-\lambda}\frac{\lambda^2}{i!}$ approximates the number of successful binomial trials given that $n$ is large and $p$ is small. For instance, $Poisson_np$ approximates the number of misprinted alphabets on a page of a book with $n$ (which is large) characters and $p$ probability of having a wrong character. $\phi(t)=exp\{\lambda(e^t-1)\}$, which gives $E[X]=\lambda$ and $Var[X]=\lambda$. The sum of independent $Poisson(\lambda_1)$ and $Poisson(\lambda_2)$ is a new Poisson random variable $Poisson(\lambda_1+\lambda_2)$. If each of a Poisson number of events having mean $\lambda$ is independently classified as being of one of the types $1,…,r$ with respective probabilities $p_1,…,p_r$, $r_i=1$, $\sum_{i=1}^rp_i =1$ , then the numbers of type $1, . . . ,r$ events are independent Poisson random variables with respective means $λp_1,…,λp_r$. If $X$ is Poisson with mean $\lambda$, then $\frac{P(X=i+1)}{P(X=i)}=\frac{\lambda}{i+1}$. ($P(X=1)=\lambda P(X=0)$, $P(X=2)=\frac{\lambda}{2}P(X=1)$, $P(X=3)=\frac{\lambda}{3}P(X=2)$, ….
 
 **Problem** Suppose that the average number of accidents occurring weekly on a particular stretch of a highway equals 3. Calculate the probability that there is at least one accident this week. 
 **Solution** We model this as a Poisson distribution with $\lambda=3$ and we have $P(X\geq 1)=1-P(X=0)=1-e^{-\lambda}\frac{\lambda^i}{i!}=1-e^{-3}\frac{3^0}{0!}=1-e^{-3}$. 
 
-**Theorem** If each of a Poisson number of events having mean $\lambda$ is independently classified as being of one of the types $1,…,r$ with respective probabilities $p_1,…,p_r$, $r_i=1$, $\sum_{i=1}^rp_i =1$ , then the numbers of type $1, . . . ,r$ events are independent Poisson random variables with respective means $λp_1,…,λp_r$.
+**Hypergeometric distribution** We have an urn filled with $N$ good and $M$ bad samples and hypergeometric distribution calculates probability of getting $i$ good samples during a random draw of $n$ samples from the urn: $P(X=i)=\frac{\binom{n}{i}\binom{m}{n-i}}{\binom{N+M}{n}}$. Let $p=\frac{N}{N+M}$, then $E[X]=np$ and $Var[X]=np(1-p)[1-\frac{n-1}{N+M-1}]$.
 
-**Theorem** If $X$ is Poisson with mean $\lambda$, then $\frac{P(X=i+1)}{P(X=i)}=\frac{\lambda}{i+1}$. ($P(X=1)=\lambda P(X=0)$, $P(X=2)=\frac{\lambda}{2}P(X=1)$, $P(X=3)=\frac{\lambda}{3}P(X=2)$, ….
+**Normal distribution** We write $X\sim \mathcal{N}(\mu,\sigma^2)$ if its density is $f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{-(x-\mu)^2/2\sigma^2}$ for $-\infty<x<\infty$. We write $Z=\mathcal{N}(0,1)$ and $\Phi(x)=P(Z<x)$ (we have $\frac{\mathcal{N}(\mu,\sigma^2)-\mu}{\sigma}=Z$. If $X\sim\mathcal{N}(\mu,\sigma^2)$, then $E[X]=\mu$, $var(X)=\sigma^2$, $Y=aX+b\sim \mathcal{N}(a\mu +b, a^2\sigma^2)$, independent $X_i\sim\mathcal{N}(\mu_i,\sigma_i^2)$ sums to $\mathcal{N}(\sum_{i}\mu_i,\sum_i\sigma_i^2)$.
 
-**Definition** We have an urn filled with $N$ good and $M$ bad samples and hypergeometric distribution calculates probability of getting $i$ good samples during a random draw of $n$ samples from the urn: $P(X=i)=\frac{\binom{n}{i}\binom{m}{n-i}}{\binom{N+M}{n}}$.
+**Exponential distribution** Let $f(x)=\lambda e^{-\lambda x}$ for $x\geq 0$ and $0$ otherwise, then $F(x)=1-e^{-\lambda x}$ for $x\geq 0$, $\phi(t)=\frac{\lambda}{\lambda-t}$ for $t<\lambda$, $EX=\frac{1}{\lambda}$, $Var(X)=\frac{1}{\lambda^2}$, $P(X>s+t|X>t)=P(X>s)$. If $X_1,...,X_n$ are independent exponential random variables, then $min(X_1,...,X_n)$ is exponential with $\lambda=sum_{i=1}^n \lambda_i$. 
 
-**Theorem** For hypergeometric distributions, let $p=\frac{N}{N+M}$, then $E[X]=np$ and $Var[X]=np(1-p)[1-\frac{n-1}{N+M-1}]$.
+**Problem** What is the probability of a man's car breaking down after 5000 miles if the time until the car breaks down follows exponential distribution with average $10000$?
+**Solution** That would be $P(X>5000)=1-F(5000)=1-(1-e^{-\lambda 5000})=e^{-\frac{1}{10000}5000}=e^{-1/2}$.
 
-**Definition** We write $X\sim \mathcal{N}(\mu,\sigma^2)$ if its density is $f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{-(x-\mu)^2/2\sigma^2}$ for $-\infty<x<\infty$. We write $Z=\mathcal{N}(0,1)$ and $\Phi(x)=P(Z<x)$. 
+**$\chi_n^2$-distribution** The sum of $n$ iid $\mathcal{N}(0,1)$ random variables, which is $\mathcal{N}(0,n)$, is a $\chi_n^2$-distribution. The sum of $
 
-**Theorem** For $X\sim\mathcal{N}(\mu,\sigma^2)$, $E[X]=\mu$, $var(X)=\sigma^2$, $Y=aX+b\sim \mathcal{N}(a\mu +b, a^2\sigma^2)$, i.i.d. $X_i\sim\mathcal{N}(\mu_i,\sigma_i^2)$ sums to $\mathcal{N}(\sum_{i}\mu_i,\sum_i\sigma_i^2)$. 
+
+
+
  
 
 
