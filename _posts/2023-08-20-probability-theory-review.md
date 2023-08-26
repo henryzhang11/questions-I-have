@@ -89,6 +89,10 @@ title: "probability theory review"
 
 **Theorem** If $X_1,...,X_n$ is a sample from a normal population with mean $\mu$ and variance $\sigma^2$, then $X$ and $S^2$ are independent random variables, with $X$ being normal with mean $\mu$ and variance $\sigma^2/n$ and $(n − 1)S^2/\sigma^2$ being chi-square with $n − 1$ degrees of freedom.
 
+**Problem** The time it takes a CPU to process job A is normally distributed with mean 20 seconds and standard deviation 3 seconds. If a sample of 15 such jobs is observed, what is the probability that the sample variance will exceed 12? 
+**Solution** The sample variance $S^2\sim \frac{9\chi_{14}^2}{14}$. So, $P(S^2>12)=P(\frac{9\chi_{14}^2}{14}>12)=P(\chi_{14}^2>\frac{14\cdot 12}{9})$.
+
+
 
 
 
