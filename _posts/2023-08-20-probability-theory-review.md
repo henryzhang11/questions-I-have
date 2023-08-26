@@ -92,6 +92,13 @@ title: "probability theory review"
 **Problem** The time it takes a CPU to process job A is normally distributed with mean 20 seconds and standard deviation 3 seconds. If a sample of 15 such jobs is observed, what is the probability that the sample variance will exceed 12? 
 **Solution** The sample variance $S^2\sim \frac{9\chi_{14}^2}{14}$. So, $P(S^2>12)=P(\frac{9\chi_{14}^2}{14}>12)=P(\chi_{14}^2>\frac{14\cdot 12}{9})$.
 
+**Theorem** Let $X_1,...,X_n$ be a sample from a normal population with mean $\mu$. Let $\overline{X}$ be the sample mean and $S$ be the sample standard deviation, then $\sqrt{n}\frac{\overline{X}-\mu}{S}\sim t_{n-1}$.
+**Proof** We have $\overline{X}\sim \frac{Z}{\sqrt{n}}+\mu$ and $S\sim\sqrt{\frac{\sigma^2 \chi_{n-1}^2}{n-1}}$ are independent. So, $\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim \frac{nZ}{}$ (didn't succeed deriving it).
+
+
+
+
+
 
 
 
