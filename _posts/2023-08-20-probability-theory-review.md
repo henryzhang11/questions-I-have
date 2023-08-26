@@ -46,7 +46,7 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 
 **Theorem** For a normal distribution $\mathcal{N}$, $P(|X-\overline{X}|\leq s)\geq 0.68$, $P(|X-\overline{X}|\leq 2s)\geq 0.95$, and $P(|X-\overline{X}|\leq 3s)\geq 0.997$. 
 
-**Definition** $r=\frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{(n-1)s_xs_y}$. When $r \>\ 0$, we say the sample data pairs are positively correlated and we say the sample data pairs are negatively correlated when $r<0$. 
+**Definition** $r=\frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{(n-1)s_xs_y}$. When $r \>\ 0$, we say the sample data pairs are positively correlated and we say the sample data pairs are negatively correlated when $r \<\ 0$. 
 
 **Theorem** We have $-1\leq r\leq 1$ and $|r|=1$ iff $(x_i,y_i)$ lie on a straight line, with $r=1$ iff the line has positive slope and $r=-1$ iff the line has negative slope. Suppose $x_i$ and $y_i$ have correlation coefficient $r$, then $a+bx_i$ and $c+dy_i$ have correlation coefficient $r$ if $bd \>\ 0$ and $-r$ if $bd \<\ 0$. 
 
@@ -79,10 +79,10 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 
 **Theorem** We have the following properties of moment generating functions: 1. $\phi^{(n)}(t)=E[X^ne^{tX}]$, so $\phi^{(n)}(0)=E[X^n]$; 2. the moment generating function of independent random variables are the product of the individual moment generating functions;
 
-**Theorem** (Markov’s inequality) We have $P(X>a)\leq \frac{E[X]}{a}$.
+**Theorem** (Markov’s inequality) We have $P(X \>\ a)\leq \frac{E[X]}{a}$.
 
 **Problem** Suppose that it is known that the number of items produced in a factory during a week is a random variable with mean 50. (a)  What can be said about the probability that this week’s production will exceed 75? (b)  If the variance of a week’s production is known to equal 25, then what can be said about the probability that this week’s production will be between 40 and 60?  
-**Solution** (a) By Markov’s inequality, $P(X>75)\leq \frac{E[X]}{75}=2/3$. (b) By Chebyshev’s inequality, $P(X\in[40,60])=1-P(X\notin[40,60])\geq 1-\frac{\sigma^2}{k^2}=1-\frac{25}{10^2}=\frac{3}{4}$. 
+**Solution** (a) By Markov’s inequality, $P(X \>\ 75)\leq \frac{E[X]}{75}=2/3$. (b) By Chebyshev’s inequality, $P(X\in[40,60])=1-P(X\notin[40,60])\geq 1-\frac{\sigma^2}{k^2}=1-\frac{25}{10^2}=\frac{3}{4}$. 
 
 **Theorem** Let $X_i$ be iid random variables with mean $\mu$, then $E[|\frac{S_n}{n}-\mu |>\epsilon]\to 0$ as $n\to\infty$. 
 
@@ -95,12 +95,12 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 
 **Hypergeometric distribution** We have an urn filled with $N$ good and $M$ bad samples and hypergeometric distribution calculates probability of getting $i$ good samples during a random draw of $n$ samples from the urn: $P(X=i)=\frac{\binom{n}{i}\binom{m}{n-i}}{\binom{N+M}{n}}$. Let $p=\frac{N}{N+M}$, then $E[X]=np$ and $Var[X]=np(1-p)[1-\frac{n-1}{N+M-1}]$.
 
-**Normal distribution** We write $X\sim \mathcal{N}(\mu,\sigma^2)$ if its density is $f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{-(x-\mu)^2/2\sigma^2}$ for $-\infty \<\x\<\\infty$. We write $Z=\mathcal{N}(0,1)$ and $\Phi(x)=P(Z<x)$ (we have $\frac{\mathcal{N}(\mu,\sigma^2)-\mu}{\sigma}=Z$. If $X\sim\mathcal{N}(\mu,\sigma^2)$, then $E[X]=\mu$, $var(X)=\sigma^2$, $Y=aX+b\sim \mathcal{N}(a\mu +b, a^2\sigma^2)$, independent $X_i\sim\mathcal{N}(\mu_i,\sigma_i^2)$ sums to $\mathcal{N}(\sum_{i}\mu_i,\sum_i\sigma_i^2)$.
+**Normal distribution** We write $X\sim \mathcal{N}(\mu,\sigma^2)$ if its density is $f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{-(x-\mu)^2/2\sigma^2}$ for $-\infty \<\ x \<\ \infty$. We write $Z=\mathcal{N}(0,1)$ and $\Phi(x)=P(Z \<\ x)$ (we have $\frac{\mathcal{N}(\mu,\sigma^2)-\mu}{\sigma}=Z$. If $X\sim\mathcal{N}(\mu,\sigma^2)$, then $E[X]=\mu$, $var(X)=\sigma^2$, $Y=aX+b\sim \mathcal{N}(a\mu +b, a^2\sigma^2)$, independent $X_i\sim\mathcal{N}(\mu_i,\sigma_i^2)$ sums to $\mathcal{N}(\sum_{i}\mu_i,\sum_i\sigma_i^2)$.
 
-**Exponential distribution** Let $f(x)=\lambda e^{-\lambda x}$ for $x\geq 0$ and $0$ otherwise, then $F(x)=1-e^{-\lambda x}$ for $x\geq 0$, $\phi(t)=\frac{\lambda}{\lambda-t}$ for $t<\lambda$, $EX=\frac{1}{\lambda}$, $Var(X)=\frac{1}{\lambda^2}$, $P(X>s+t|X>t)=P(X>s)$. If $X_1,...,X_n$ are independent exponential random variables, then $min(X_1,...,X_n)$ is exponential with $\lambda=sum_{i=1}^n \lambda_i$. 
+**Exponential distribution** Let $f(x)=\lambda e^{-\lambda x}$ for $x\geq 0$ and $0$ otherwise, then $F(x)=1-e^{-\lambda x}$ for $x\geq 0$, $\phi(t)=\frac{\lambda}{\lambda-t}$ for $t \<\ \lambda$, $EX=\frac{1}{\lambda}$, $Var(X)=\frac{1}{\lambda^2}$, $P(X \>\ s+t|X \>\ t)=P(X \>\ s)$. If $X_1,...,X_n$ are independent exponential random variables, then $min(X_1,...,X_n)$ is exponential with $\lambda=sum_{i=1}^n \lambda_i$. 
 
 **Problem** What is the probability of a man's car breaking down after 5000 miles if the time until the car breaks down follows exponential distribution with average $10000$?
-**Solution** That would be $P(X>5000)=1-F(5000)=1-(1-e^{-\lambda 5000})=e^{-\frac{1}{10000}5000}=e^{-1/2}$.
+**Solution** That would be $P(X \>\ 5000)=1-F(5000)=1-(1-e^{-\lambda 5000})=e^{-\frac{1}{10000}5000}=e^{-1/2}$.
 
 **$\chi_n^2$-distribution** The sum of $n$ iid $\mathcal{N}(0,1)$ random variables, which is $\mathcal{N}(0,n)$, is a $\chi_n^2$-distribution. The sum of $
 
