@@ -116,7 +116,9 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 **Problem** An astronomer wants to measure the distance to a distant star. The astronomer believes the values of the successive measurements are iid with a mean of d light years and a standard deviation of 2 light years, how many measurements need she make to be at least 95 percent certain that her estimate is accurate to within ± .5 light years? 
 **Solution** When there are $n$ measurements $\overline{X}\sim\mathcal{N}(d, 2/\sqrt{n})$. $P(|\overline{X}-d|<0.5)=P(|Z|<0.5\sqrt{n}/2)>0.95$ is equivalent to $\Phi(0.5\sqrt{n}/2)>0.975$, which gives $n\geq 62$. 
 
+**Definition** $S^2=\frac{\sum_{i=1}^n(X_i-\overline{X})^2}{n-1}$ is called the sample variance and $S=\sqrt{S^2}$ is the sample standard deviation. We have $E[S^2]=\sigma^2$, the population variance.
 
+**Theorem** If $X_1,...,X_n$ is a sample from a normal population with mean $\mu$ and variance $\sigma^2$, then $X$ and $S^2$ are independent random variables, with $X$ being normal with mean $\mu$ and variance $\sigma^2/n$ and $(n − 1)S^2/\sigma^2$ being chi-square with $n − 1$ degrees of freedom.
 
 
  
