@@ -108,7 +108,10 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 
 **F-distribution** Let $\chi_n^2$ and $\chi_m^2$ be independent, then $F_{n,m}=\frac{\chi_n^2/n}{\chi_m^2/m}$ is a $F$-distribution with $n$ and $m$ degrees of freedom. For $\alpha\in(0,1)$, let $F_{\alpha,n,m}$ be such that $P(F_{n,m}>F_{\alpha,n,m})=\alpha$, then $\frac{1}{F_{\alpha,n,m}}=F_{1-\alpha,m,n}$ 
 
-**Theorem (Central Limit Theorem)** It follows from the central limit theorem that $X_1+...+X_n$ is approximately $\mathcal{N}(n\mu, n\sigma^2)$. 
+**Theorem (Central Limit Theorem)** It follows from the central limit theorem that $X_1+...+X_n$ is approximately $\mathcal{N}(n\mu, n\sigma^2)$. In other words, the sample mean $\overline{X}\sim\mathcal{N}(\mu,\sigma/\sqrt{n})$.
+
+**Problem** W, the weight (in 1,000 pounds uits) that a bridge can withstand without damage, is $\mathcal{N}(400,1600)$. Suppose the weight (in 1,000 pounds units) of a car is a random variable with mean 3 and standard deviation .3. How many cars would have to be on the bridge span for the probability of structural damage to exceed .1? 
+Let $X_i$ be the weight of car $i$ and $R_n=W-\sum_{i=1}^n X_i$, then we want the minimum $n$ so that $P(R_n<0)>0.1$. We approximate $\sum_{i=1}^n X_i$ by $\mathcal{N}(3n, 0.09n)$ by central limit theorem, then $R_n=\mathcal{N}(400-3n, 0.09n+1600)$. The minimum $n$ so that $P(\mathcal{N}(400-3n,0.09n+1600)<0)=P(Z<\frac{-400+3n}{\sqrt{0.09n}+1600})<0.1$ is $117$. 
 
 
 
