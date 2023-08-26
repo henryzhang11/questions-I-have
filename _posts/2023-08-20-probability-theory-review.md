@@ -102,7 +102,13 @@ __solution:__ Consider the following state space $(7,7),7,12,s$ with $(7,7)$ sta
 **Problem** What is the probability of a man's car breaking down after 5000 miles if the time until the car breaks down follows exponential distribution with average $10000$?
 **Solution** That would be $P(X \>\ 5000)=1-F(5000)=1-(1-e^{-\lambda 5000})=e^{-\frac{1}{10000}5000}=e^{-1/2}$.
 
-**$\chi_n^2$-distribution** The sum of $n$ iid $\mathcal{N}(0,1)$ random variables, which is $\mathcal{N}(0,n)$, is a $\chi_n^2$-distribution. The sum of $
+**$\chi_n^2$-distribution** Given iid $X_i\sim Z$, $Z=\sum_{i=1}^n X_i^2$ is a $\chi_n^2$-distribution. The sum of independent $\chi_n^2$ and $\chi_m^2$ is $\chi_{n+m}^2$. 
+
+**t-distribution** Let $Z$ and $\chi_n^2$ be independent, $T_n=\frac{Z}{\sqrt{\chi_n^2/n}}$ is a t-distribution with $n$ degrees of freedom. $T_n$ approximates $Z$ as $n\to\infty$ because $\chi_n^2/n\to 1$ by the weak law of large numbers. $E[T_n]=0$, $var(T_n)=\frac{n}{n-2}$ (for $n>2$), 
+
+**F-distribution** Let $\chi_n^2$ and $\chi_m^2$ be independent, then $F_{n,m}=\frac{\chi_n^2/n}{\chi_m^2/m}$ is a $F$-distribution with $n$ and $m$ degrees of freedom. For $\alpha\in(0,1)$, let $F_{\alpha,n,m}$ be such that $P(F_{n,m}>F_{\alpha,n,m})=\alpha$, then $\frac{1}{F_{\alpha,n,m}}=F_{1-\alpha,m,n}$ 
+
+**Theorem (Central Limit Theorem)** It follows from the central limit theorem that $X_1+...+X_n$ is approximately $\mathcal{N}(n\mu, n\sigma^2)$. 
 
 
 
