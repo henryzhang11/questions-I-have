@@ -140,17 +140,17 @@ title: "probability theory review"
 **Definition** A null hypothesis is a statement about parameters $\theta$ of a population distribution. If the null hypothesis, along with existing information on $\theta$, completely determines the distribution, then its a simple hypothesis. Otherwise, its a composite hypothesis. A test for a null hypothesis could be specified by defining a "critical region" $C\subset \mathbb{R}^n$ so that one rejects the null hypothesis if $(X_1,...,X_n)\in C$ and one accepts the null hypothesis if $(X_1,...,X_n)\notin C$. Type I error, is said to result if the test incorrectly calls for rejecting $H_0$ when it is indeed correct. Type II error, results if the test calls for accepting $H_0$ when it is false. One way to measure type II errors is the operating characteristic (OC) curve, the probability that null hypothesis is accepted when its false. A common approach to developing a test of $H_0$ at level of significance $\alpha$, is to start by determining a point estimator of $\theta$ such as $d(X)$. To determine how “far away” it need be to justify rejection of $H_0$, we determine the probability distribution of $d(X)$ when $H_0$ is true and then the critical region with significance level $\alpha$.
 
 **Theorem** Given a sample $X_1,...,X_n$ from a normal population. 
-1. Given $\sigma$, reject the null hypothesis that $\mu$ is equal to $\mu_0$ with confidence level $\alpha$ if $|\overline{X_n}-\mu_0|> z_{\alpha/2}\sigma/\sqrt{n}$. (If $\mu=\mu_0$, then $\overline{X}\sim\mathcal{N}(\mu_0,\sigma^2/n)$. $\overline{X}\in(\mu_0\pm z_{\alpha/2}\sigma/sqrt{n})$ with probability $1-\alpha$. If not, we say $\mu\neq \mu_0$ with $1-\alpha$ confidence.)
+1. Given $\sigma$, reject the null hypothesis that $\mu$ is equal to $\mu_0$ with p-value $\alpha$ if $|\overline{X_n}-\mu_0|> z_{\alpha/2}\sigma/\sqrt{n}$. ($\mu_0=\mu\in(\overline{X_n}\pm z_{\alpha/2}\sigma/\sqrt{n})$ with $1-\alpha$ probability. If not, then $\mu\neq\mu_0$ with $\alpha$ significance.)
 
 2. Given $\sigma$, the probability of accepting $\mu=\mu_0$ when $\mu\neq \mu_0$ equals $\beta(\mu)=\Phi(\frac{(\mu_0+z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})-\Phi(\frac{(\mu_0-z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})=\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}+z_{\alpha/2})-\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}-z_{\alpha/2})$. (The first step could be seen as calculating the probability that $\overline{X_n}\sim\mathcal{N}(\mu,\sigma/\sqrt{n})$ falls in the interval $(\mu_0\pm z_{\alpha/2}\sigma/\sqrt{n})$.)
 
-3. Given $\sigma$, reject the null hypothesis that $\mu=\mu_0$ (with the alternative hypothesis $mu>\mu_0$) with confidence level $\alpha$ when $\overline{X}-\mu_0>z_\alpha \sigma/sqrt{n}$. (If $\mu=\mu_0$, $\overline{X}\sim\mathcal{N}(\mu_0,\sigma^2/n)$. $\overline{X}<\mu_0+z_{\alpha}\sigma/\sqrt{n}$ with probability $1-\alpha$. If not, we say $\mu>\mu_0$ with $1-\alpha$ confidence.)
+3. Given $\sigma$, reject the null hypothesis that $\mu=\mu_0$ (with the alternative hypothesis $mu>\mu_0$) with p-value $\alpha$ when $\overline{X}-\mu_0>z_\alpha \sigma/\sqrt{n}$. (If $\mu=\mu_0$, $\overline{X}\sim\mathcal{N}(\mu_0,\sigma^2/n)$. $\overline{X}<\mu_0+z_{\alpha}\sigma/\sqrt{n}$ with probability $1-\alpha$. If not, we say $\mu>\mu_0$ with $1-\alpha$ confidence.)
 
 4. Given $\sigma$, the probability of accepting $\mu=\mu_0$ when $\mu \>\ \mu_0$ equals $\beta(\mu)=\Phi(\frac{\mu_0-\mu+z_\alpha\sigma/sqrt{n}}{\sigma/\sqrt{n}})=\Phi(\frac{\sqrt{n}(\mu_0-\mu)}{\sigma}+z_\alpha)$.
 
 5. Point 3 could be extended to the null hypothesis that $\mu\leq\mu_0$ versus $\mu>\mu_0$, since $\beta(\mu)\leq\alpha$ for $\mu\leq\mu_0$.
 
-6. Given $\sigma$, reject the null hypothesis that $\mu\geq\mu_0$ (with the alternative hypothesis $\mu<\mu_0$) with confidence level $\alpha$ when $\overline{X_n}\leq \mu_0-z_\alpha \sigma\sqrt{n}$. 
+6. Given $\sigma$, reject the null hypothesis that $\mu\geq\mu_0$ (with the alternative hypothesis $\mu<\mu_0$) with p-value $\alpha$ when $\overline{X_n}\leq \mu_0-z_\alpha \sigma\sqrt{n}$. 
 
 
 
