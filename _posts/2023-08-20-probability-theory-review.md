@@ -108,7 +108,7 @@ title: "probability theory review"
 **Problem** The number of traffic accidents in Berkeley in 10 randomly chosen days is as follows: 4,0,6,5,2,1,2,0,4,3. Use these data to estimate the proportion of days that had 2 or fewer accidents.
 **Solution** Since the total number of drivers is large and the probability of accident is small, we approximate the number of accidents with a Poisson random variable. With the above trials, the MLE of $\lambda$ is $2.7$. So, we have $P(X\leq 2)\approx e^{-2.7}(1+2.7+\frac{2.7^2}{2})$.
 
-**Theorem** If $X_1,...,X_n$ is a sample from a normal population with unknown mean $\mu$ and known standard variation $\sigma$, then the $95$% confidence intervals of $\mu$ are $(\overline{x}-1.96\frac{\sigma}{\sqrt{n}},\overline{x}+1.96\frac{\sigma}{\sqrt{n}})$, $(\overline{x}-1.645\frac{\sigma}{\sqrt{n}},\infty)$, or $(-\infty,\overline{x}+1.645\frac{\sigma}{\sqrt{n}})$. Let $z_\alpha$ be $P(Z>z_\alpha)=\alpha$ then the $\alpha$% confidence interval is $(\overline{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\overline{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}})$, $(-\infty,\overline{x}+z_\alpha\frac{\sigma}{\sqrt{n}})$, and $(\overline{x}-z_\alpha\frac{\sigma}{\sqrt{n}},\infty)$. 
+**Theorem** Let $X_1,...,X_n$ be a sample from a normal population with unknown mean $\mu$ and known standard variation $\sigma$ and let $z_\alpha$ be $P(Z>z_\alpha)=\alpha$, then the $\alpha$% confidence intervals are $(\overline{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\overline{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}})$, $(-\infty,\overline{x}+z_\alpha\frac{\sigma}{\sqrt{n}})$, and $(\overline{x}-z_\alpha\frac{\sigma}{\sqrt{n}},\infty)$. 
 
 **Problem** The weights of salmon are normal with a mean that varies from season to season but with a standard deviation that remains fixed at 0.3 pounds. If we want to be 95 percent certain that our estimate of the present season’s mean weight of a salmon is correct to within ±0.1 pounds, how large a sample is needed?
 **Solution** We want $2z_{0.025}\frac{0.3}{\sqrt{n}}=2z_{\alpha}\frac{\sigma}{\sqrt{n}}\leq 0.2$, then $n\geq (3z_{0.025})^2=34.57$.
@@ -118,7 +118,9 @@ title: "probability theory review"
 **Theorem** Let $X_1,...,X_n$ be a sample from a normal population with unknown $\mu$ and $\sigma$, then the $1-\alpha$ confidence interval of $X_{n+1}$ is $(\overline{X_n}-t_{n-1,\alpha/2}S_n\sqrt{1+1/n},\overline{X_n}+t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$. 
 **Proof** $\overline{X_n}\sim\mathcal{N}(\mu,\sigma^2/n)$ and $X_{n+1}\sim\mathcal{N}(\mu,\sigma^2)$, so $\overline{X_n}-X_{n+1}\sim\mathcal{N}(0,\sigma^2(1+1/n))$ and $\frac{\overline{X_n}-X_{n+1}}{\sigma\sqrt{1+1/n}}\sim\mathcal{N}(0,1)$. Since $\frac{(n-1)S_n^2}{\sigma^2}\sim \chi_{n-1}^2$ and is independent of $\frac{\overline{X_n}-X_{n+1}}{\sigma\sqrt{1+1/n}}$, we have $\frac{\overline{X_n}-X_{n+1}}{S_n\sqrt{(1+1/n)}}\sim T_{n-1}$. So, $X_{n+1}\in (\overline{X_n}\pm t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$ with confidence $1-\alpha$. 
 
+**Theorem** Let $X_1,...,X_n$ be a sample from a normal population with unknown $\mu$ and $\sigma$, 
 
+**Proof** $(n-1)S_n^2/\sigma^2\sim T_{n-1}$, so $\sigma^2\in(\frac{(n-1)S_n^2}{t_{n-1,\alpha/2}},\frac{(n-1)S_n^2}{t_{n-1,1-\alpha/2}})$.
 
 
 
