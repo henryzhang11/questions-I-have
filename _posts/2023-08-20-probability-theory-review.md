@@ -113,9 +113,10 @@ title: "probability theory review"
 **Problem** The weights of salmon are normal with a mean that varies from season to season but with a standard deviation that remains fixed at 0.3 pounds. If we want to be 95 percent certain that our estimate of the present season’s mean weight of a salmon is correct to within ±0.1 pounds, how large a sample is needed?
 **Solution** We want $2z_{0.025}\frac{0.3}{\sqrt{n}}=2z_{\alpha}\frac{\sigma}{\sqrt{n}}\leq 0.2$, then $n\geq (3z_{0.025})^2=34.57$.
 
-**Theorem** If $X_1,...,X_n$ is a sample from a normal population with unknown mean $\mu$ and unknown, then the $1-\alpha$ confidence intervals of $\mu$ are $(\overline{x}-t_{n-1,\alpha/2}\frac{S}{\sqrt{n}},\overline{x}+t_{n-1,\alpha/2}\frac{S}{\sqrt{n}})$, $(-\infty,\overline{x}+t_{n-1,\alpha}\frac{S}{\sqrt{n}})$, or $(\overline{x}-t_{n-1,\alpha}\frac{S}{\sqrt{n}})$ with $S$ the sample variance, since $\frac{\overline{x}}{S/\sqrt{n}}$ is a t-distribution. 
+**Theorem** If $X_1,...,X_n$ is a sample from a normal population with unknown mean $\mu$ and $\sigma$, then the $1-\alpha$ confidence intervals of $\mu$ are $(\overline{x}-t_{n-1,\alpha/2}\frac{S}{\sqrt{n}},\overline{x}+t_{n-1,\alpha/2}\frac{S}{\sqrt{n}})$, $(-\infty,\overline{x}+t_{n-1,\alpha}\frac{S}{\sqrt{n}})$, or $(\overline{x}-t_{n-1,\alpha}\frac{S}{\sqrt{n}})$ with $S$ the sample variance, since $\frac{\overline{x}}{S/\sqrt{n}}$ is a t-distribution. 
 
-
+**Theorem** Let $X_1,...,X_n$ be a sample from a normal population with unknown $\mu$ and $\sigma$, then the $1-\alpha$ confidence interval of $X_{n+1}$ is $(\overline{X_n}-t_{n-1,\alpha/2}S_n\sqrt{1+1/n},\overline{X_n}+t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$. 
+**Proof** $\overline{X_n}\sim\mathcal{N}(\mu,\sigma^2/n)$ and $X_{n+1}\sim\mathcal{N}(\mu,\sigma^2)$, so $\overline{X_n}-X_{n+1}\sim\mathcal{N}(0,\sigma^2(1+1/n))$. Since $\frac{(n-1)S_n^2}{\sigma}\sim \chi_{n-1}^2$, 
 
 
 
