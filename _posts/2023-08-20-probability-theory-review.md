@@ -142,7 +142,7 @@ title: "probability theory review"
 **Theorem** Given a sample $X_1,...,X_n$ from a normal population. 
 1. Given $\sigma$, we reject the null hypothesis that $\mu$ is equal to $\mu_0$ with confidence level $\alpha$ if $|\overline{X_n}-\mu_0|> z_{\alpha/2}\sigma/\sqrt{n}$. (This could be seen by looking at the probability distribution of $\overline{X}\sim\mathcal{N}(\mu,\sigma^2/n)$ with $\mu$ the population mean.)
 
-2. Given $\sigma$, the probability of accepting $\mu=\mu_0$ when $\mu\neq \mu_0$ equals $\beta(\mu)=\Phi(\frac{(\mu_0+z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})-\Phi(\frac{(\mu_0-z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})=\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}+z_{\alpha/2})-\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}-z_{\alpha/2})$.
+2. Given $\sigma$, the probability of accepting $\mu=\mu_0$ when $\mu\neq \mu_0$ equals $\beta(\mu)=\Phi(\frac{(\mu_0+z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})-\Phi(\frac{(\mu_0-z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})=\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}+z_{\alpha/2})-\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}-z_{\alpha/2})$. (The first step could be seen as calculating the probability that $\overline{X_n}\sim\mathcal{N}(\mu,\sigma/\sqrt{n})$ falls in the interval $(\mu_0\pm z_{\alpha/2}\sigma/\sqrt{n})$.)
 
 
 
