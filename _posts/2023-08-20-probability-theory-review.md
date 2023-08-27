@@ -118,11 +118,12 @@ title: "probability theory review"
 
 4. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence interval of $\sigma^2$ is $(\frac{(n-1)S_n^2}{t_{n-1,\alpha/2}},\frac{(n-1)S_n^2}{t_{n-1,1-\alpha/2}})$.
 
+5. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and known $\sigma_1^2$, $Y_i$ has unknown $\mu_2$ and known $\sigma_2^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_n}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}}$. 
+
 
 **Proof of 3** $\overline{X_n}\sim\mathcal{N}(\mu,\sigma^2/n)$ and $X_{n+1}\sim\mathcal{N}(\mu,\sigma^2)$, so $\overline{X_n}-X_{n+1}\sim\mathcal{N}(0,\sigma^2(1+1/n))$ and $\frac{\overline{X_n}-X_{n+1}}{\sigma\sqrt{1+1/n}}\sim\mathcal{N}(0,1)$. Since $\frac{(n-1)S_n^2}{\sigma^2}\sim \chi_{n-1}^2$ and is independent of $\frac{\overline{X_n}-X_{n+1}}{\sigma\sqrt{1+1/n}}$, we have $\frac{\overline{X_n}-X_{n+1}}{S_n\sqrt{(1+1/n)}}\sim T_{n-1}$. So, $X_{n+1}\in (\overline{X_n}\pm t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$ with confidence $1-\alpha$.
 
 **Proof of 4** $(n-1)S_n^2/\sigma^2\sim T_{n-1}$.
-
 
 **Problem** The weights of salmon are normal with a mean that varies from season to season but with a standard deviation that remains fixed at 0.3 pounds. If we want to be 95 percent certain that our estimate of the present season’s mean weight of a salmon is correct to within ±0.1 pounds, how large a sample is needed?
 **Solution** We want $2z_{0.025}\frac{0.3}{\sqrt{n}}=2z_{\alpha}\frac{\sigma}{\sqrt{n}}\leq 0.2$, then $n\geq (3z_{0.025})^2=34.57$.
