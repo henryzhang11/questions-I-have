@@ -118,9 +118,8 @@ title: "probability theory review"
 **Theorem** Let $X_1,...,X_n$ be a sample from a normal population with unknown $\mu$ and $\sigma$, then the $1-\alpha$ confidence interval of $X_{n+1}$ is $(\overline{X_n}-t_{n-1,\alpha/2}S_n\sqrt{1+1/n},\overline{X_n}+t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$. 
 **Proof** $\overline{X_n}\sim\mathcal{N}(\mu,\sigma^2/n)$ and $X_{n+1}\sim\mathcal{N}(\mu,\sigma^2)$, so $\overline{X_n}-X_{n+1}\sim\mathcal{N}(0,\sigma^2(1+1/n))$ and $\frac{\overline{X_n}-X_{n+1}}{\sigma\sqrt{1+1/n}}\sim\mathcal{N}(0,1)$. Since $\frac{(n-1)S_n^2}{\sigma^2}\sim \chi_{n-1}^2$ and is independent of $\frac{\overline{X_n}-X_{n+1}}{\sigma\sqrt{1+1/n}}$, we have $\frac{\overline{X_n}-X_{n+1}}{S_n\sqrt{(1+1/n)}}\sim T_{n-1}$. So, $X_{n+1}\in (\overline{X_n}\pm t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$ with confidence $1-\alpha$. 
 
-**Theorem** Let $X_1,...,X_n$ be a sample from a normal population with unknown $\mu$ and $\sigma$, 
-
-**Proof** $(n-1)S_n^2/\sigma^2\sim T_{n-1}$, so $\sigma^2\in(\frac{(n-1)S_n^2}{t_{n-1,\alpha/2}},\frac{(n-1)S_n^2}{t_{n-1,1-\alpha/2}})$.
+**Theorem** Let $X_1,...,X_n$ be a sample from a normal population with unknown $\mu$ and $\sigma$, we have $1-\alpha$ confidence interval $(\frac{(n-1)S_n^2}{t_{n-1,\alpha/2}},\frac{(n-1)S_n^2}{t_{n-1,1-\alpha/2}})$. 
+**Proof** $(n-1)S_n^2/\sigma^2\sim T_{n-1}$.
 
 
 
