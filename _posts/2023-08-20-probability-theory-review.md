@@ -101,7 +101,7 @@ title: "probability theory review"
 **Problem** The country with the greatest per capita consumption of pork is Denmark. In 2013, the amount of pork consumed by a person residing in Denmark had a mean value of 147 pounds with a standard deviation of 62 pounds. If a random sample of 25 Danes is chosen, approximate the probability that the average amount of pork consumed by the members of this group in 2013 exceeded 150 pounds.
 **Solution** We have $\sqrt{n}(\overline{X}-\mu)/\sigma\sim Z$, so $\overline{X}\sim\mathcal{N}(\mu,\frac{\sigma^2}{n})=\mathcal{N}(147,\frac{62^2}{25})$ when $n$ is large. So, $P(\overline{X} \>\ 147)\approx P(\mathcal{N}(147,\frac{62^2}{25})>150)=P(Z \>\ \frac{3}{62/5})$.
 
-
+**Definition** Define the likelihood function $f(x_1,...,x_n|\theta)$ as the probability mass of $(x_1,...,x_n)$ for discrete independent $X_1,...,X_n$ and the joint probability density function of continnuous independent population. We maximize $f(x_1,...,x_n|\theta)$ (which is equivalent to maximizing $\log(f(x_1,...,x_n|\theta))$) w.r.t. $\theta$ to obtain the maximum likelihood estimate of $\theta$.
 
 
 
