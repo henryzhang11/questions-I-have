@@ -95,7 +95,11 @@ title: "probability theory review"
 **Theorem** Let $X_1,...,X_n$ be a sample from a normal population with mean $\mu$. Let $\overline{X}$ be the sample mean and $S$ be the sample standard deviation, then $\sqrt{n}\frac{\overline{X}-\mu}{S}\sim t_{n-1}$.
 **Proof** We have $\overline{X}\sim \frac{Z}{\sqrt{n}}+\mu$ and $S\sim\sqrt{\frac{\sigma^2 \chi_{n-1}^2}{n-1}}$ are independent. So, $\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim \frac{nZ}{}$ (didn't succeed deriving it).
 
+**Problem** Suppose 45 percent of the population favors a certain candidate in an upcoming election. If a random sample of size 200 is chosen, find (a) the expected value and standard deviation of the number of members of the sample that favor the candidate; (b) the probability that more than half the members of the sample favor the candidate.
+**Solution** (a) Since the entire population is large, we approximate the hypergeometric distribution (of number of candidates supporting a certain candidate) with binomial distribution. So, $E[\overlin{X}]=np=200\cdot .45=90$ and $\sigma(\overline{X})=\sqrt{np(1-p)}=\sqrt{200\cdot 0.45\cdot 0.55}$. (b) We approximate the binomial distribution $binom(p,n)$ with a normal distribution $\mathcal{N}(n\mu, n\sigma^2)=\mathcal{N}(np,np(1-p))$. The probability is then approximately $P(S_n\geq 101)\approx P(S_n\geq 100.5)=P(\mathcal{N}(90,200\cdot 0.45\cdot 0.55) \>\ 100.5)=P(Z \>\ \frac{10.5}{\sqrt{200\cdot 0.45\cdot 0.55}})$.
 
+**Problem** The country with the greatest per capita consumption of pork is Denmark. In 2013, the amount of pork consumed by a person residing in Denmark had a mean value of 147 pounds with a standard deviation of 62 pounds. If a random sample of 25 Danes is chosen, approximate the probability that the average amount of pork consumed by the members of this group in 2013 exceeded 150 pounds.
+**Solution** We have $\sqrt{n}(\overline{X}-\mu)/\sigma\sim Z$, so $\overline{X}\sim\mathcal{N}(\mu,\frac{\sigma^2}{n})=\mathcal{N}(147,\frac{62^2}{25})$ when $n$ is large. So, $P(\overline{X} \>\ 147)\approx P(\mathcal{N}(147,\frac{62^2}{25})>150)=P(Z>\frac{3}{\sqrt{62^2/25}})$.
 
 
 
