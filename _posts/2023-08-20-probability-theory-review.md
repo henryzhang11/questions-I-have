@@ -137,7 +137,12 @@ title: "probability theory review"
 **Theorem** Let $X_1,...,X_n$ be a sample drawn from a Bernoulli random variable population, then the $1-\alpha$ confidence interval for $p$ is approximately $(\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}})$ with $\hat{p}=\frac{X}{n}$.
 **Proof** By CLT, $\frac{X-np}{\sqrt{p(1-p)n}}\sim\mathcal{N}(0,1)$. So, $p\in (\hat{p}\pm z_{\alpha/2}\sqrt{p(1-p)/n})$, which is approximately $(\hat{p}\pm z_{\alpha/2}\sqrt{\hat{p}(1-\hat{p})/n})$. 
 
+**Definition** A null hypothesis is a statement about parameters $\theta$ of a population distribution. If the null hypothesis, along with existing information on $\theta$, completely determines the distribution, then its a simple hypothesis. Otherwise, its a composite hypothesis. A test for a null hypothesis could be specified by defining a "critical region" $C\subset \mathbb{R}^n$ so that one rejects the null hypothesis if $(X_1,...,X_n)\in C$ and one accepts the null hypothesis if $(X_1,...,X_n)\notin C$. Type I error, is said to result if the test incorrectly calls for rejecting $H_0$ when it is indeed correct. Type II error, results if the test calls for accepting $H_0$ when it is false. One way to measure type II errors is the operating characteristic (OC) curve, the probability that null hypothesis is accepted when its false. A common approach to developing a test of $H_0$ at level of significance $\alpha$, is to start by determining a point estimator of $\theta$ such as $d(X)$. To determine how “far away” it need be to justify rejection of $H_0$, we determine the probability distribution of $d(X)$ when $H_0$ is true and then the critical region with significance level $\alpha$.
 
+**Theorem** Given a sample $X_1,...,X_n$ from a normal population. 
+1. Given $\sigma$, we reject the null hypothesis that $\mu$ is equal to $\mu_0$ with confidence level $\alpha$ if $|\overline{X_n}-\mu_0|> z_{\alpha/2}\sigma/\sqrt{n}$. (This could be seen by looking at the probability distribution of $\overline{X}\sim\mathcal{N}(\mu,\sigma^2/n)$ with $\mu$ the population mean.)
+
+2. Given $\sigma$, the probability of accepting $\mu=\mu_0$ when $\mu\neq \mu_0$ equals $\beta(\mu)=\Phi(\frac{(\mu_0+z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})-\Phi(\frac{(\mu_0-z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})=\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}+z_{\alpha/2})-\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}-z_{\alpha/2})$.
 
 
 
