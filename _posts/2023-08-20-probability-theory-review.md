@@ -134,8 +134,8 @@ title: "probability theory review"
 **Problem** The weights of salmon are normal with a mean that varies from season to season but with a standard deviation that remains fixed at 0.3 pounds. If we want to be 95 percent certain that our estimate of the present season’s mean weight of a salmon is correct to within ±0.1 pounds, how large a sample is needed?
 **Solution** We want $2z_{0.025}\frac{0.3}{\sqrt{n}}=2z_{\alpha}\frac{\sigma}{\sqrt{n}}\leq 0.2$, then $n\geq (3z_{0.025})^2=34.57$.
 
-**Theorem** Let $X_1,...,X_n$ be a sample drawn from a Bernoulli random variable population, then the $1-\alpha$ confidence interval for $p$ is approximately $(\hat{p}\pm z_{\alpha/2}\sqrt{\hat{p}(1-\hat{p})})$ with $\hat{p}=\frac{X}{n}$.
-**Proof** By CLT, $\frac{X-np}{\sqrt{p(1-p)n}}\sim\mathcal{N}(0,1)$. So, $p\in (\hat{p}\pm z_{\alpha/2}\sqrt{p(1-p)n})$, which is approximately $(\hat{p}\pm z_{\alpha/2}\sqrt{\hat{p}(1-\hat{p})n})$. 
+**Theorem** Let $X_1,...,X_n$ be a sample drawn from a Bernoulli random variable population, then the $1-\alpha$ confidence interval for $p$ is approximately $(\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}})$ with $\hat{p}=\frac{X}{n}$.
+**Proof** By CLT, $\frac{X-np}{\sqrt{p(1-p)n}}\sim\mathcal{N}(0,1)$. So, $p\in (\hat{p}\pm z_{\alpha/2}\sqrt{p(1-p)/n})$, which is approximately $(\hat{p}\pm z_{\alpha/2}\sqrt{\hat{p}(1-\hat{p})/n})$. 
 
 
 
