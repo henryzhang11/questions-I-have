@@ -118,7 +118,7 @@ title: "probability theory review"
 
 4. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence interval of $\sigma^2$ is $(\frac{(n-1)S_n^2}{\chi_{n-1,\alpha/2}^2},\frac{(n-1)S_n^2}{\chi_{n-1,1-\alpha/2}^2})$.
 
-5. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and known $\sigma_1^2$, $Y_i$ has unknown $\mu_2$ and known $\sigma_2^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_n}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}})$ since $$\frac{\overline{X}-\overline{Y}}{\sqrt{\sigma_x^2/n+\sigma_y^2/m}}\sim Z$
+5. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and known $\sigma_1^2$, $Y_i$ has unknown $\mu_2$ and known $\sigma_2^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_n}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}})$ since $\frac{\overline{X}-\overline{Y}}{\sqrt{\sigma_x^2/n+\sigma_y^2/m}}\sim Z$
 
 6. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_x$ and $\sigma^2$, $Y_i$ has unknown $\mu_y$ and $\sigma^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_m}\pm t_{n+m-2,\alpha/2}\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{(n-1)S_1^2+(m-1)S_2^2}{n+m-2}})$.
 
