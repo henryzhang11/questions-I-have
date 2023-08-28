@@ -112,7 +112,7 @@ title: "probability theory review"
 
 1. If $\mu$ is unknown and $\sigma$ is known, then the $\alpha$% confidence intervals are $(\overline{x}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}})$, $(-\infty,\overline{x}+z_\alpha\frac{\sigma}{\sqrt{n}})$, and $(\overline{x}-z_\alpha\frac{\sigma}{\sqrt{n}},\infty)$. 
 
-2. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence intervals of $\mu$ are $(\overline{x}\pm t_{n-1,\alpha/2}\frac{S}{\sqrt{n}})$, $(-\infty,\overline{x}+t_{n-1,\alpha}\frac{S}{\sqrt{n}})$, or $(\overline{x}-t_{n-1,\alpha}\frac{S}{\sqrt{n}})$ with $S$ the sample variance, since $\frac{\overline{x}}{S/\sqrt{n}}$ is a t-distribution. 
+2. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence intervals of $\mu$ are $(\overline{x}\pm t_{n-1,\alpha/2}\frac{S}{\sqrt{n}})$, $(-\infty,\overline{x}+t_{n-1,\alpha}\frac{S}{\sqrt{n}})$, or $(\overline{x}-t_{n-1,\alpha}\frac{S}{\sqrt{n}})$ with $S$ the sample variance, since $\frac{\overline{x}-\mu}{S/\sqrt{n}}$ is a t-distribution. 
 
 3. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence interval of $X_{n+1}$ is $(\overline{X_n}-t_{n-1,\alpha/2}S_n\sqrt{1+1/n},\overline{X_n}+t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$.
 
