@@ -118,7 +118,7 @@ title: "probability theory review"
 
 4. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence interval of $\sigma^2$ is $(\frac{(n-1)S_n^2}{\chi_{n-1,\alpha/2}^2},\frac{(n-1)S_n^2}{\chi_{n-1,1-\alpha/2}^2})$.
 
-5. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and known $\sigma_1^2$, $Y_i$ has unknown $\mu_2$ and known $\sigma_2^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_n}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}})$.
+5. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and known $\sigma_1^2$, $Y_i$ has unknown $\mu_2$ and known $\sigma_2^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_n}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}})$ since $$\frac{\overline{X}-\overline{Y}}{\sqrt{\sigma_x^2/n+\sigma_y^2/m}}\sim Z$
 
 6. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_x$ and $\sigma^2$, $Y_i$ has unknown $\mu_y$ and $\sigma^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_m}\pm t_{n+m-2,\alpha/2}\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{(n-1)S_1^2+(m-1)S_2^2}{n+m-2}})$.
 
@@ -146,7 +146,7 @@ title: "probability theory review"
 
 3. If $\mu$ and $\sigma$ are unknown, reject $\mu=\mu_0$ with p-value $\alpha$ if $\frac{\overline{X}-\mu_0}{S/\sqrt{n}}\notin(\pm t_{n-1,\alpha/2})$; reject $\mu\leq\mu_0$ with significance level $\alpha$ if $\mu_0\notin(\overline{X}-t_{n-1,\alpha}\frac{S}{\sqrt{n}},\infty)$.
 
-4. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$ and $\mu_y$ are unknown and $\sigma_x$ and $\sigma_y$ are known, then reject $\mu_x=\mu_y$ if $\frac{\overline{X}-\overline{Y}}{\sqrt{\sigma_x^2/n+\sigma_y^2/m}}\notin(\pm z_{\alpha/2})$.
+4. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$ and $\mu_y$ are unknown and $\sigma_x$ and $\sigma_y$ are known, then reject $\mu_x=\mu_y$ if $P(\mathcal{N}(0,\sqrt{\sigma_x^2/n+\sigma_y^2/m})>\overline{X}-\overline{Y})\leq \alpha/2$ or $P(\mathcal{N}(0,\sqrt{\sigma_x^2/n+\sigma_y^2/m})\leq\overline{X}-\overline{Y})\leq\alpha/2$.
 
 5. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, and $\sigma_x^2=\sigma^2=\sigma_y^2$ are unknown, then reject $\mu_x=\mu_y$ if $\frac{(\overline{X}-\overline{Y})}{\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{S_x^2(n-1)+S_y^2(m-1)}{(m+n-2)}}}\notin(\pm t_{n+m-2,\alpha/2})$.
 
