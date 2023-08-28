@@ -3,11 +3,11 @@ layout: post
 title: "probability theory review"
 ---
 
-**Definition** Variance is defined as $s^2=\sum_{i=1}^n(x_i-\overline{x})^2/(n-1) and standard deviation is defined as $s=\sqrt{s^2}$. 
+**Definition** Variance is defined as $s^2=\sum_{i=1}^n(x_i-\overline{x})^2/(n-1)$ and standard deviation is defined as $s=\sqrt{s^2}$. 
 
-**Definition** The sample 100p percentile is that data value such that at least 100p percent of the data are less than or equal to it and at least 100(1 − p) percent are greater than or equal to it. If two data values satisfy this condition, then the sample 100p percentile is the arithmetic average of these two values.
+**Definition** The sample 100p percentile is that data value such that at least 100p percent of the data are less than or equal to it and at least 100(1-p) percent are greater than or equal to it. If two data values satisfy this condition, then the sample 100p percentile is the arithmetic average of these two values.
 
-**Calculating 100p percentail**Then, note that if np is not an integer, then the only data value that satisfies the preceding conditions is the one whose position when the data are ordered from smallest to largest is the smallest integer exceeding np. For instance, if n = 22, p = .8, then we require a data value such that at least 17.6 of the values are less than or equal to it, and at least 4.4 of them are greater than or equal to it. Clearly, only the 18th smallest value satisfies both conditions and this is the sample 80 percentile. On the other hand, if np is an integer, then it is easy to check that both the values in positions np and np + 1 satisfy the preceding conditions, and so the sample 100p percentile is the average of these values. For instance, if we wanted the 90 percentile of a data set of size 20, then both the (18)th and (19)th smallest values would be such that at least 90 percent of the data values are less than or equal to them, and at least 10 percent of the data values are greater than or equal to them.
+**Calculating 100p percentile** Then, note that if np is not an integer, then the only data value that satisfies the preceding conditions is the one whose position when the data are ordered from smallest to largest is the smallest integer exceeding np. For instance, if n = 22, p = .8, then we require a data value such that at least 17.6 of the values are less than or equal to it, and at least 4.4 of them are greater than or equal to it. Clearly, only the 18th smallest value satisfies both conditions and this is the sample 80 percentile. On the other hand, if np is an integer, then it is easy to check that both the values in positions np and np + 1 satisfy the preceding conditions, and so the sample 100p percentile is the average of these values. For instance, if we wanted the 90 percentile of a data set of size 20, then both the (18)th and (19)th smallest values would be such that at least 90 percent of the data values are less than or equal to them, and at least 10 percent of the data values are greater than or equal to them.
 
 **Definition** The sample 25 percentile is called the first quartile; the sample 50 percentile is called the sample median or the second quartile; the sample 75 percentile is called the third quartile. A box plot is often used to plot some of the summarizing statistics of a data set. A straight line segment stretching from the smallest to the largest data value is drawn on a horizontal axis; imposed on the line is a “box,” which starts at the first and continues to the third quartile, with the value of the second quartile indicated by a vertical line. The length of the line segment on the box plot, equal to the largest minus the smallest data value, is called the range of the data. Also, the length of the box itself, equal to the third quartile minus the first quartile, is called the interquartile range. 
 
@@ -15,9 +15,9 @@ title: "probability theory review"
 
 **Theorem** For a normal distribution $\mathcal{N}$, $P(|X-\overline{X}|\leq s)\geq 0.68$, $P(|X-\overline{X}|\leq 2s)\geq 0.95$, and $P(|X-\overline{X}|\leq 3s)\geq 0.997$. 
 
-**Definition** $r=\frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{(n-1)s_xs_y}$. When $r \>\ 0$, we say the sample data pairs are positively correlated and we say the sample data pairs are negatively correlated when $r \<\ 0$. 
+**Definition** $r=\frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{(n-1)s_xs_y}$. When $r > 0$, we say the sample data pairs are positively correlated and we say the sample data pairs are negatively correlated when $r < 0$. 
 
-**Theorem** We have $-1\leq r\leq 1$ and $|r|=1$ iff $(x_i,y_i)$ lie on a straight line, with $r=1$ iff the line has positive slope and $r=-1$ iff the line has negative slope. Suppose $x_i$ and $y_i$ have correlation coefficient $r$, then $a+bx_i$ and $c+dy_i$ have correlation coefficient $r$ if $bd \>\ 0$ and $-r$ if $bd \<\ 0$. 
+**Theorem** We have $-1\leq r\leq 1$ and $|r|=1$ iff $(x_i,y_i)$ lie on a straight line, with $r=1$ iff the line has positive slope and $r=-1$ iff the line has negative slope. Suppose $x_i$ and $y_i$ have correlation coefficient $r$, then $a+bx_i$ and $c+dy_i$ have correlation coefficient $r$ if $bd > 0$ and $-r$ if $bd < 0$. 
 
 **Definition** $A_1,...,A_n$ are independent if for $I\subset\{1,...,n\}$, we have $P(\cap_{i\in I} A_i)=\prod_{i\in I} P(A_i)$. 
 
@@ -36,7 +36,7 @@ title: "probability theory review"
 **Theorem** $P(X\in A|Y=y)=\int_Af_{X|Y}(x|y)dx$. 
 
 **Problem** Suppose that $X$ and $Y$ are independent and have the common density function of $e^{-x}$ for $x \>\ 0$ and $0$ otherwise. What's the density function of $X/Y$? 
-**Solution** We first work out the CDF of $X/Y$: $X/Y \<\ a$ iff $X \<\ Ya$. Since $X$ and $Y$ are independent, $F(a)=P(X \<\ Ya)=\int_0^\infty\int_0^{ya} e^{-x}dxe^{-y}dy=\int_0^\infty(1-e^{-ya})e^{-y}dy=1-\int_0^\infty e^{-y(a+1)}dy=1-\frac{1}{a+1}=\frac{a}{a+1}$. So, the PDF of $X/Y$ is $\frac{dF}{da}=\frac{1}{(a+1)^2}$. 
+**Solution** We first work out the CDF of $X/Y$: $X/Y < a$ iff $X < Ya$. Since $X$ and $Y$ are independent, $F(a)=P(X < Ya)=\int_0^\infty\int_0^{ya} e^{-x}dxe^{-y}dy=\int_0^\infty(1-e^{-ya})e^{-y}dy=1-\int_0^\infty e^{-y(a+1)}dy=1-\frac{1}{a+1}=\frac{a}{a+1}$. So, the PDF of $X/Y$ is $\frac{dF}{da}=\frac{1}{(a+1)^2}$. 
 
 **Theorem** If $X$ and $Y$ have joint density $f$, then $E[g(x,y)]=\int_{\mathbb{R}^2}fgdxdy$. 
 
@@ -50,12 +50,12 @@ title: "probability theory review"
 
 **Theorem** (Markov’s inequality) We have $P(X \>\ a)\leq \frac{E[X]}{a}$.
 
-**Problem** Suppose that it is known that the number of items produced in a factory during a week is a random variable with mean 50. (a)  What can be said about the probability that this week’s production will exceed 75? (b)  If the variance of a week’s production is known to equal 25, then what can be said about the probability that this week’s production will be between 40 and 60?  
+**Problem** Suppose that it is known that the number of items produced in a factory during a week is a random variable with mean 50. (a) What can be said about the probability that this week’s production will exceed 75? (b) If the variance of a week’s production is known to equal 25, then what can be said about the probability that this week’s production will be between 40 and 60?
 **Solution** (a) By Markov’s inequality, $P(X \>\ 75)\leq \frac{E[X]}{75}=2/3$. (b) By Chebyshev’s inequality, $P(X\in[40,60])=1-P(X\notin[40,60])\geq 1-\frac{\sigma^2}{k^2}=1-\frac{25}{10^2}=\frac{3}{4}$. 
 
 **Theorem** Let $X_i$ be iid random variables with mean $\mu$, then $E[|\frac{S_n}{n}-\mu |>\epsilon]\to 0$ as $n\to\infty$. 
 
-**Binomial distribution** $P(X=i)=\(\binom{i}{n}\) p^i(1-p)^{n-i}$. 
+**Binomial distribution** $P(X=i)=\binom{i}{n} p^i(1-p)^{n-i}$. 
 
 **Poisson distribution** $P(X=i)=e^{-\lambda}\frac{\lambda^i}{i!}$ approximates the number of successful binomial trials given that $n$ is large and $p$ is small. For instance, $Poisson_np$ approximates the number of misprinted alphabets on a page of a book with $n$ (which is large) characters and $p$ probability of having a wrong character. $\phi(t)=exp\{\lambda(e^t-1)\}$, which gives $E[X]=\lambda$ and $Var[X]=\lambda$. The sum of independent $Poisson(\lambda_1)$ and $Poisson(\lambda_2)$ is a new Poisson random variable $Poisson(\lambda_1+\lambda_2)$. If each of a Poisson number of events having mean $\lambda$ is independently classified as being of one of the types $1,…,r$ with respective probabilities $p_1,…,p_r$, $r_i=1$, $\sum_{i=1}^rp_i =1$ , then the numbers of type $1, . . . ,r$ events are independent Poisson random variables with respective means $λp_1,…,λp_r$. If $X$ is Poisson with mean $\lambda$, then $\frac{P(X=i+1)}{P(X=i)}=\frac{\lambda}{i+1}$. ($P(X=1)=\lambda P(X=0)$, $P(X=2)=\frac{\lambda}{2}P(X=1)$, $P(X=3)=\frac{\lambda}{3}P(X=2)$, ….
 
@@ -140,11 +140,11 @@ title: "probability theory review"
 **Definition** A null hypothesis is a statement about parameters $\theta$ of a population distribution. If the null hypothesis, along with existing information on $\theta$, completely determines the distribution, then its a simple hypothesis. Otherwise, its a composite hypothesis. A test for a null hypothesis could be specified by defining a "critical region" $C\subset \mathbb{R}^n$ so that one rejects the null hypothesis if $(X_1,...,X_n)\in C$ and one accepts the null hypothesis if $(X_1,...,X_n)\notin C$. Type I error, is said to result if the test incorrectly calls for rejecting $H_0$ when it is indeed correct. Type II error, results if the test calls for accepting $H_0$ when it is false. One way to measure type II errors is the operating characteristic (OC) curve, the probability that null hypothesis is accepted when its false. $p$-value of a test sample is the probability of getting results at least as extreme as the test sample under the null hypothesis. If the $p$-value is less than the significance level $\alpha$, then the null hypothesis is rejected. A common approach to developing a test of $H_0$ at level of significance $\alpha$, is to start by determining a point estimator of $\theta$ such as $d(X)$. To determine how “far away” it need be to justify rejection of $H_0$, we determine the probability distribution of $d(X)$ when $H_0$ is true and then the critical region with significance level $\alpha$.
 
 **Theorem** Given a sample $X_1,...,X_n$ from a normal population. 
-1. If $\mu$ is unknown and $\sigma$ is known, reject $\mu=\mu_0$ with confidence level $\alpha$ if $P(Z\geq\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}})\leq\alpha/2$ or $P(Z\leq\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}})\leq\alpha/2$; reject $\mu\leq\mu_0$ if $P(\mathcal{N}(\mu_0,\sigma^2/n)\geq \overline{X})\leq\alpha$; reject $\mu\geq\mu_0$ if $P(\mathcal{N}(\mu_0,\sigma^2/n)\geq \overline{X})\leq\alpha$.
+1. If $\mu$ is unknown and $\sigma$ is known, reject $\mu=\mu_0$ with confidence level $\alpha$ if $P(Z\geq\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}})\leq\alpha/2$ or $P(Z\leq\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}})\leq\alpha/2$; reject $\mu\leq\mu_0$ if $P(\mathcal{N}(\mu_0,\sigma^2/n)\geq \overline{X})\leq\alpha$; reject $\mu\geq\mu_0$ if $P(\mathcal{N}(\mu_0,\sigma^2/n)\geq \overline{X})\leq\alpha$. (not sure how to generalize the statistics criterion)
 
 2. If $\mu$ is unknown and $\sigma$ is known, the probability of accepting $\mu=\mu_0$ when $\mu\neq \mu_0$ equals $\beta(\mu)=\Phi(\frac{(\mu_0+z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})-\Phi(\frac{(\mu_0-z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})=\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}+z_{\alpha/2})-\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}-z_{\alpha/2})$. (The first step could be seen as calculating the probability that $\overline{X_n}\sim\mathcal{N}(\mu,\sigma/\sqrt{n})$ falls in the interval $(\mu_0\pm z_{\alpha/2}\sigma/\sqrt{n})$.); the probability of accepting $\mu=\mu_0$ when $\mu \>\ \mu_0$ equals $\beta(\mu)=\Phi(\frac{\mu_0-\mu+z_\alpha\sigma/sqrt{n}}{\sigma/\sqrt{n}})=\Phi(\frac{\sqrt{n}(\mu_0-\mu)}{\sigma}+z_\alpha)$.
 
-3. If $\mu$ and $\sigma$ are unknown, reject $\mu=\mu_0$ with p-value $\alpha$ if $\frac{\overline{X}-\mu_0}{S/\sqrt{n}}\notin(\pm t_{n-1,\alpha/2})$; reject $\mu\leq\mu_0$ with significance level $\alpha$ if $\mu_0\notin(\overline{X}-t_{n-1,\alpha}\frac{S}{\sqrt{n}},\infty)$. (do not know how to convert this to a condition on the p-value)
+3. If $\mu$ and $\sigma$ are unknown, reject $\mu=\mu_0$ with p-value $\alpha$ if $P(T_{n-1}\leq\frac{\overline{X}-\mu_0}{S/\sqrt{n}})\leq\alpha/2$ or $P(T_{n-1}\leq\frac{\overline{X}-\mu_0}{S/\sqrt{n}})\leq\alpha/2$; reject $\mu\leq\mu_0$ with significance level $\alpha$ if $\mu_0\notin(\overline{X}-t_{n-1,\alpha}\frac{S}{\sqrt{n}},\infty)$.
 
 4. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$ and $\mu_y$ are unknown and $\sigma_x$ and $\sigma_y$ are known, then reject $\mu_x=\mu_y$ if $P(\mathcal{N}(0,\sqrt{\sigma_x^2/n+\sigma_y^2/m})>\overline{X}-\overline{Y})\leq \alpha/2$ or $P(\mathcal{N}(0,\sqrt{\sigma_x^2/n+\sigma_y^2/m})\leq\overline{X}-\overline{Y})\leq\alpha/2$.
 
@@ -169,8 +169,6 @@ title: "probability theory review"
 1. Reject the hypothesis $\lambda=\lambda_0$ if $P_{\lambda_0}(X\geq x)\leq\alpha/2$ or $P_{\lambda_0}(X\leq x)\leq\alpha/2$. 
 
 2. Given a sample $Y_1,...,Y_n$ from another Poisson population (their sum is Poisson) with $\lambda_2$ unknown, reject the hypothesis $\lambda_2=c\lambda$ if $P(Bin(n,1/(1+c))\geq x_1)\leq \alpha/2$ or if $P(Bin(n,1/(1+c))\leq x_1)\leq\alpha/2$ with $x_1=\sum X_i$ (because the distribution of $X_1$ given $X_1+X_2=n$ (with $X_1\sim Poisson(\lambda_1)$ and $X_2\sim Poisson(\lambda_2)$) is biomial with $p=1/(1+c)$.)
-
-
 
 
 
