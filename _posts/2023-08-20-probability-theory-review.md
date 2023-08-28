@@ -144,7 +144,7 @@ title: "probability theory review"
 
 2. If $\mu$ is unknown and $\sigma$ is known, the probability of accepting $\mu=\mu_0$ when $\mu\neq \mu_0$ equals $\beta(\mu)=\Phi(\frac{(\mu_0+z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})-\Phi(\frac{(\mu_0-z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})=\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}+z_{\alpha/2})-\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}-z_{\alpha/2})$. (The first step could be seen as calculating the probability that $\overline{X_n}\sim\mathcal{N}(\mu,\sigma/\sqrt{n})$ falls in the interval $(\mu_0\pm z_{\alpha/2}\sigma/\sqrt{n})$.); the probability of accepting $\mu=\mu_0$ when $\mu \>\ \mu_0$ equals $\beta(\mu)=\Phi(\frac{\mu_0-\mu+z_\alpha\sigma/sqrt{n}}{\sigma/\sqrt{n}})=\Phi(\frac{\sqrt{n}(\mu_0-\mu)}{\sigma}+z_\alpha)$.
 
-3. If $\mu$ and $\sigma$ are unknown, reject "$\mu=\mu_0$" with p-value $\alpha$ if $\mu_0\notin(\overline{X}\pm t_{n-1,\alpha/2}\frac{S}{\sqrt{n}})$; reject $\mu\leq\mu_0$ with p-value $\alpha$ if $\mu_0\notin(\oveline{X}-t_{n-1,\alpha}\frac{S}{\sqrt{n}},\infty)$. 
+3. If $\mu$ and $\sigma$ are unknown, reject "$\mu=\mu_0$" with p-value $\alpha$ if $\mu_0\notin(\overline{X}\pm t_{n-1,\alpha/2}\frac{S}{\sqrt{n}})$; reject $\mu\leq\mu_0$ with p-value $\alpha$ if $\mu_0\notin(\overline{X}-t_{n-1,\alpha}\frac{S}{\sqrt{n}},\infty)$. 
 
 
 
