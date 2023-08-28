@@ -164,11 +164,11 @@ title: "probability theory review"
 
 3. Given a sample $Y_1,...,Y_m$ from another Bernoulli sample with $p'$ unknown, reject the hypothesis that $p=p'$ if $P(hypergeometric(n,m,x+y)\geq x)\leq \alpha/2$ or $P(hypergeometric(n,m,x+y)\leq x)\leq\alpha/2$ with $x=\sum X_i$ and $y=\sum Y_i$.
 
-**Theorem** Given a sample $X_1,...,X_n$ from a Poisson population with $\lambda$ unknown:
+**Theorem** Given a sample $X_1,...,X_n$ from a Poisson population (their sum is Poisson) with $\lambda$ unknown:
 
 1. Reject the hypothesis $\lambda=\lambda_0$ if $P_{\lambda_0}(X\geq x)\leq\alpha/2$ or $P_{\lambda_0}(X\leq x)\leq\alpha/2$. 
 
-
+2. Given a sample $Y_1,...,Y_n$ from another Poisson population (their sum is Poisson) with $\lambda_2$ unknown, reject the hypothesis $\lambda_2=c\lambda$ if $P(Bin(n,1/(1+c))\geq x_1)\leq \alpha/2$ or if $P(Bin(n,1/(1+c))\leq x_1)\leq\alpha/2$ with $x_1=\sum X_i$ (because the distribution of $X_1$ given $X_1+X_2=n$ (with $X_1\sim Poisson(\lambda_1)$ and $X_2\sim Poisson(\lambda_2)$) is biomial with $p=1/(1+c)$.)
 
 
 
