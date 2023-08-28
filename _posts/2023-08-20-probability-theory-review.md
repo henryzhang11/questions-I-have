@@ -148,7 +148,7 @@ title: "probability theory review"
 
 4. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$ and $\mu_y$ are unknown and $\sigma_x$ and $\sigma_y$ are known, then reject $\mu_x=\mu_y$ if $\frac{\overline{X}-\overline{Y}}{\sqrt{\sigma_x^2/n+\sigma_y^2/m}}\notin(\pm z_{\alpha/2})$.
 
-5. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, and $\sigma_x^2=\sigma^2=\sigma_y^2$ are unknown, then reject $\mu_x=\mu_y$ if $\frac{\sqrt{n+m}(\overline{X}-\overline{Y})}{\sqrt{\frac{S_x^2(n-1)+S_y^2(m-1)}{(m+n-2)}}}$.
+5. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, and $\sigma_x^2=\sigma^2=\sigma_y^2$ are unknown, then reject $\mu_x=\mu_y$ if $\frac{(\overline{X}-\overline{Y})}{\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{S_x^2(n-1)+S_y^2(m-1)}{(m+n-2)}}}$.
 
 
 
