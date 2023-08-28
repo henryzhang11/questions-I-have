@@ -150,7 +150,7 @@ title: "probability theory review"
 
 5. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, and $\sigma_x^2=\sigma^2=\sigma_y^2$ are unknown, then reject $\mu_x=\mu_y$ if $\frac{(\overline{X}-\overline{Y})}{\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{S_x^2(n-1)+S_y^2(m-1)}{(m+n-2)}}}\notin(\pm t_{n+m-2,\alpha/2})$.
 
-6. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, $\sigma_x^2$, $\sigma_y^2$ are unknown and $m$ and $n$ are large, then reject $\mu_x=\mu_y$ if $\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S_x^2}{n}+\frac{S_y^2}{m}}\notin(\pmZ_{\alpha/2})$.
+6. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, $\sigma_x^2$, $\sigma_y^2$ are unknown and $m$ and $n$ are large, then reject $\mu_x=\mu_y$ if $\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S_x^2}{n}+\frac{S_y^2}{m}}\notin(\pm Z_{\alpha/2})$.
 
 7. If $\mu$ and $\sigma$ are both unknown, then reject $\sigma^2=\sigma_0^2$ if $\frac{(n-1)S^2}{\sigma_0^2}\notin(\chi_{n-1,1-\alpha/2}^2,\chi_{n-1,\alpha/2}^2)$.
 
