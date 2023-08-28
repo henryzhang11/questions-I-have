@@ -112,13 +112,13 @@ title: "probability theory review"
 
 1. If $\mu$ is unknown and $\sigma$ is known, then the $\alpha$% confidence intervals are $(\overline{x}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}})$, $(-\infty,\overline{x}+z_\alpha\frac{\sigma}{\sqrt{n}})$, and $(\overline{x}-z_\alpha\frac{\sigma}{\sqrt{n}},\infty)$. 
 
-2. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence intervals of $\mu$ are $(\overline{x}\pm t_{n-1,\alpha/2}\frac{S}{\sqrt{n}})$, $(-\infty,\overline{x}+t_{n-1,\alpha}\frac{S}{\sqrt{n}})$, or $(\overline{x}-t_{n-1,\alpha}\frac{S}{\sqrt{n}})$ with $S$ the sample variance, since $\frac{\overline{x}-\mu}{S/\sqrt{n}}$ is a t-distribution. 
+2. If $\mu$ and $\sigma$ are unknown, then $\frac{\overline{x}-\mu}{S/\sqrt{n}}\sim T_{n-1}$ and the $1-\alpha$ confidence intervals of $\mu$ are $(\overline{x}\pm t_{n-1,\alpha/2}\frac{S}{\sqrt{n}})$, $(-\infty,\overline{x}+t_{n-1,\alpha}\frac{S}{\sqrt{n}})$, or $(\overline{x}-t_{n-1,\alpha}\frac{S}{\sqrt{n}})$ with $S$ the sample variance. 
 
 3. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence interval of $X_{n+1}$ is $(\overline{X_n}-t_{n-1,\alpha/2}S_n\sqrt{1+1/n},\overline{X_n}+t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$.
 
 4. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence interval of $\sigma^2$ is $(\frac{(n-1)S_n^2}{\chi_{n-1,\alpha/2}^2},\frac{(n-1)S_n^2}{\chi_{n-1,1-\alpha/2}^2})$.
 
-5. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and known $\sigma_1^2$, $Y_i$ has unknown $\mu_2$ and known $\sigma_2^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_n}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}})$ since $\frac{\overline{X}-\overline{Y}}{\sqrt{\sigma_x^2/n+\sigma_y^2/m}}\sim Z$
+5. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and known $\sigma_1^2$, $Y_i$ has unknown $\mu_2$ and known $\sigma_2^2$, then $\frac{\overline{X}-\overline{Y}-(\mu_x-\mu_y)}{\sqrt{\sigma_x^2/n+\sigma_y^2/m}}\sim Z$ and the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_n}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}})$.
 
 6. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_x$ and $\sigma^2$, $Y_i$ has unknown $\mu_y$ and $\sigma^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_m}\pm t_{n+m-2,\alpha/2}\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{(n-1)S_1^2+(m-1)S_2^2}{n+m-2}})$.
 
