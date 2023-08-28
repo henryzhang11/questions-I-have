@@ -92,8 +92,8 @@ title: "probability theory review"
 **Problem** The time it takes a CPU to process job A is normally distributed with mean 20 seconds and standard deviation 3 seconds. If a sample of 15 such jobs is observed, what is the probability that the sample variance will exceed 12? 
 **Solution** The sample variance $S^2\sim \frac{9\chi_{14}^2}{14}$. So, $P(S^2>12)=P(\frac{9\chi_{14}^2}{14}>12)=P(\chi_{14}^2>\frac{14\cdot 12}{9})$.
 
-**Theorem** Let $X_1,...,X_n$ be a sample from a normal population with mean $\mu$. Let $\overline{X}$ be the sample mean and $S$ be the sample standard deviation, then $\sqrt{n}\frac{\overline{X}-\mu}{S}\sim t_{n-1}$.
-**Proof** We have $\overline{X}\sim \frac{Z}{\sqrt{n}}+\mu$ and $S\sim\sqrt{\frac{\sigma^2 \chi_{n-1}^2}{n-1}}$ are independent. So, $\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim \frac{nZ}{}$ (didn't succeed deriving it).
+**Theorem** Let $X_1,...,X_n$ be a sample from a normal population with mean $\mu$. Let $\overline{X}$ be the sample mean and $S$ be the sample standard deviation, then $\sqrt{n}\frac{\overline{X}-\mu}{S}\sim T_{n-1}$.
+**Proof** $\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim\mathcal{N}(0,1)$ and $S^2/\sigma^2\sim\chi_{n-1}^2/(n-1)$ are independent. So, $\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim T_{n-1}$. 
 
 **Problem** Suppose 45 percent of the population favors a certain candidate in an upcoming election. If a random sample of size 200 is chosen, find (a) the expected value and standard deviation of the number of members of the sample that favor the candidate; (b) the probability that more than half the members of the sample favor the candidate.
 **Solution** (a) Since the entire population is large, we approximate the hypergeometric distribution (of number of candidates supporting a certain candidate) with binomial distribution. So, $E[\overline{X}]=np=200\cdot .45=90$ and $\sigma(\overline{X})=\sqrt{np(1-p)}=\sqrt{200\cdot 0.45\cdot 0.55}$. (b) We approximate the binomial distribution $binom(p,n)$ with a normal distribution $\mathcal{N}(n\mu, n\sigma^2)=\mathcal{N}(np,np(1-p))$. The probability is then approximately $P(S_n\geq 101)\approx P(S_n\geq 100.5)=P(\mathcal{N}(90,200\cdot 0.45\cdot 0.55) \>\ 100.5)=P(Z \>\ \frac{10.5}{\sqrt{200\cdot 0.45\cdot 0.55}})$.
@@ -120,7 +120,7 @@ title: "probability theory review"
 
 5. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and known $\sigma_1^2$, $Y_i$ has unknown $\mu_2$ and known $\sigma_2^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_n}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}})$.
 
-6. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and $\sigma^2$, $Y_i$ has unknown $\mu_2$ and $\sigma^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_m}\pm t_{n+m-2,\alpha/2}\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{(n-1)S_1^2+(m-1)S_2^2}{n+m-2}})$.
+6. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_x$ and $\sigma^2$, $Y_i$ has unknown $\mu_y$ and $\sigma^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_m}\pm t_{n+m-2,\alpha/2}\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{(n-1)S_1^2+(m-1)S_2^2}{n+m-2}})$.
 
 
 **Proof of 3** $\overline{X_n}\sim\mathcal{N}(\mu,\sigma^2/n)$ and $X_{n+1}\sim\mathcal{N}(\mu,\sigma^2)$, so $\overline{X_n}-X_{n+1}\sim\mathcal{N}(0,\sigma^2(1+1/n))$ and $\frac{\overline{X_n}-X_{n+1}}{\sigma\sqrt{1+1/n}}\sim\mathcal{N}(0,1)$. Since $\frac{(n-1)S_n^2}{\sigma^2}\sim \chi_{n-1}^2$ and is independent of $\frac{\overline{X_n}-X_{n+1}}{\sigma\sqrt{1+1/n}}$, we have $\frac{\overline{X_n}-X_{n+1}}{S_n\sqrt{(1+1/n)}}\sim T_{n-1}$. So, $X_{n+1}\in (\overline{X_n}\pm t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$ with confidence $1-\alpha$.
@@ -129,7 +129,7 @@ title: "probability theory review"
 
 **Proof of 5** $\overline{X_n}\sim\mathcal{N}(\mu_1,\sigma_1^2/n)$, $\overline{Y_n}\sim\mathcal{N}(\mu_2,\sigma_2^2/m)$, so $\overline{X_n}-\overline{Y_n}\sim \mathcal{N}(\mu_1-\mu_2,\sigma_1^2/n+\sigma_2^2/m)$.
 
-**Proof of 6** skipped
+**Proof of 6** $\frac{\overline{X}-\overline{Y}-(\mu_x-\mu_y)}{\sqrt{\sigma^2(1/n+1/m)}}\sim Z$ and $\frac{(n-1)S_x^2+(m-1)S_y^2}{\sigma^2}\sim \chi_{n+m-2}^2$. So, $\frac{\overline{X}-\overline{Y}-(\mu_x-\mu_y)}{\sqrt{(1/n+1/m)\frac{(n-1)S_x^2+(m-1)S_y^2}{n+m-2}}}\sim T_{n+m-2}$.
 
 **Problem** The weights of salmon are normal with a mean that varies from season to season but with a standard deviation that remains fixed at 0.3 pounds. If we want to be 95 percent certain that our estimate of the present season’s mean weight of a salmon is correct to within ±0.1 pounds, how large a sample is needed?
 **Solution** We want $2z_{0.025}\frac{0.3}{\sqrt{n}}=2z_{\alpha}\frac{\sigma}{\sqrt{n}}\leq 0.2$, then $n\geq (3z_{0.025})^2=34.57$.
@@ -140,11 +140,15 @@ title: "probability theory review"
 **Definition** A null hypothesis is a statement about parameters $\theta$ of a population distribution. If the null hypothesis, along with existing information on $\theta$, completely determines the distribution, then its a simple hypothesis. Otherwise, its a composite hypothesis. A test for a null hypothesis could be specified by defining a "critical region" $C\subset \mathbb{R}^n$ so that one rejects the null hypothesis if $(X_1,...,X_n)\in C$ and one accepts the null hypothesis if $(X_1,...,X_n)\notin C$. Type I error, is said to result if the test incorrectly calls for rejecting $H_0$ when it is indeed correct. Type II error, results if the test calls for accepting $H_0$ when it is false. One way to measure type II errors is the operating characteristic (OC) curve, the probability that null hypothesis is accepted when its false. A common approach to developing a test of $H_0$ at level of significance $\alpha$, is to start by determining a point estimator of $\theta$ such as $d(X)$. To determine how “far away” it need be to justify rejection of $H_0$, we determine the probability distribution of $d(X)$ when $H_0$ is true and then the critical region with significance level $\alpha$.
 
 **Theorem** Given a sample $X_1,...,X_n$ from a normal population. 
-1. If $\mu$ is unknown and $\sigma$ is known, reject $\mu=\mu_0$ with p-value $\alpha$ if $\frac{\mu_0-\overline{X}}{\sigma/\sqrt{n}}\notin(\pm z_{\alpha/2})$; reject "$\mu\leq\mu_0$" if $\mu_0\notin(\overline{X}-z_{\alpha}\sigma/\sqrt{n},\infty)$; reject $\mu\geq\mu_0$ if $\mu_0\notin(-\infty,\overline{X}+z_{\alpha}\sigma/\sqrt{n})$.
+1. If $\mu$ is unknown and $\sigma$ is known, reject $\mu=\mu_0$ with confidence level $\alpha$ if $\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\notin(\pm z_{\alpha/2})$; reject "$\mu\leq\mu_0$" if $\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\notin(-\infty,z_{\alpha})$; reject $\mu\geq\mu_0$ if $\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\notin(-z_{\alpha},\infty)$.
 
 2. If $\mu$ is unknown and $\sigma$ is known, the probability of accepting $\mu=\mu_0$ when $\mu\neq \mu_0$ equals $\beta(\mu)=\Phi(\frac{(\mu_0+z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})-\Phi(\frac{(\mu_0-z_{\alpha/2}\sigma/\sqrt{n}-\mu)}{\sigma/\sqrt{n}})=\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}+z_{\alpha/2})-\Phi(\frac{\mu_0-\mu}{\sigma/\sqrt{n}}-z_{\alpha/2})$. (The first step could be seen as calculating the probability that $\overline{X_n}\sim\mathcal{N}(\mu,\sigma/\sqrt{n})$ falls in the interval $(\mu_0\pm z_{\alpha/2}\sigma/\sqrt{n})$.); the probability of accepting $\mu=\mu_0$ when $\mu \>\ \mu_0$ equals $\beta(\mu)=\Phi(\frac{\mu_0-\mu+z_\alpha\sigma/sqrt{n}}{\sigma/\sqrt{n}})=\Phi(\frac{\sqrt{n}(\mu_0-\mu)}{\sigma}+z_\alpha)$.
 
-3. If $\mu$ and $\sigma$ are unknown, reject $\mu=\mu_0$ with p-value $\alpha$ if $\mu_0\notin(\overline{X}\pm t_{n-1,\alpha/2}\frac{S}{\sqrt{n}})$; reject $\mu\leq\mu_0$ with p-value $\alpha$ if $\mu_0\notin(\overline{X}-t_{n-1,\alpha}\frac{S}{\sqrt{n}},\infty)$. 
+3. If $\mu$ and $\sigma$ are unknown, reject $\mu=\mu_0$ with p-value $\alpha$ if $\frac{\overline{X}-\mu_0}{S/\sqrt{n}}\notin(\pm t_{n-1,\alpha/2})$; reject $\mu\leq\mu_0$ with significance level $\alpha$ if $\mu_0\notin(\overline{X}-t_{n-1,\alpha}\frac{S}{\sqrt{n}},\infty)$.
+
+4. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$ and $\mu_y$ are unknown and $\sigma_x$ and $\sigma_y$ are known, then reject $\mu_x=\mu_y$ if $\frac{\overline{X}-\overline{Y}}{\sqrt{\sigma_x^2/n+\sigma_y^2/m}}\notin(\pm z_{\alpha/2})$.
+
+5. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, and $\sigma_x^2=\sigma^2=\sigma_y^2$ are unknown, then reject $\mu_x=\mu_y$ if $\frac{\sqrt{n+m}(\overline{X}-\overline{Y})}{\sqrt{\frac{S_x^2(n-1)+S_y^2(m-1)}{(m+n-2)}}}$.
 
 
 
