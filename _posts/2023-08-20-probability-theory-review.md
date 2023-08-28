@@ -116,7 +116,7 @@ title: "probability theory review"
 
 3. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence interval of $X_{n+1}$ is $(\overline{X_n}-t_{n-1,\alpha/2}S_n\sqrt{1+1/n},\overline{X_n}+t_{n-1,\alpha/2}S_n\sqrt{1+1/n})$.
 
-4. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence interval of $\sigma^2$ is $(\frac{(n-1)S_n^2}{t_{n-1,\alpha/2}},\frac{(n-1)S_n^2}{t_{n-1,1-\alpha/2}})$.
+4. If $\mu$ and $\sigma$ are unknown, then the $1-\alpha$ confidence interval of $\sigma^2$ is $(\frac{(n-1)S_n^2}{\chi_{n-1,\alpha/2}^2},\frac{(n-1)S_n^2}{\chi_{n-1,1-\alpha/2}^2})$.
 
 5. If in addition $Y_1,...,Y_m$ is a sample from a normal population, $X_i$ has unknown $\mu_1$ and known $\sigma_1^2$, $Y_i$ has unknown $\mu_2$ and known $\sigma_2^2$, then the $1-\alpha$ confidence interval of $\mu_1-\mu_2$ is $(\overline{X_n}-\overline{Y_n}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}})$.
 
@@ -137,7 +137,7 @@ title: "probability theory review"
 **Theorem** Let $X_1,...,X_n$ be a sample drawn from a Bernoulli random variable population, then the $1-\alpha$ confidence interval for $p$ is approximately $(\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}})$ with $\hat{p}=\frac{X}{n}$.
 **Proof** By CLT, $\frac{X-np}{\sqrt{p(1-p)n}}\sim\mathcal{N}(0,1)$. So, $p\in (\hat{p}\pm z_{\alpha/2}\sqrt{p(1-p)/n})$, which is approximately $(\hat{p}\pm z_{\alpha/2}\sqrt{\hat{p}(1-\hat{p})/n})$. 
 
-**Definition** A null hypothesis is a statement about parameters $\theta$ of a population distribution. If the null hypothesis, along with existing information on $\theta$, completely determines the distribution, then its a simple hypothesis. Otherwise, its a composite hypothesis. A test for a null hypothesis could be specified by defining a "critical region" $C\subset \mathbb{R}^n$ so that one rejects the null hypothesis if $(X_1,...,X_n)\in C$ and one accepts the null hypothesis if $(X_1,...,X_n)\notin C$. Type I error, is said to result if the test incorrectly calls for rejecting $H_0$ when it is indeed correct. Type II error, results if the test calls for accepting $H_0$ when it is false. One way to measure type II errors is the operating characteristic (OC) curve, the probability that null hypothesis is accepted when its false. A common approach to developing a test of $H_0$ at level of significance $\alpha$, is to start by determining a point estimator of $\theta$ such as $d(X)$. To determine how “far away” it need be to justify rejection of $H_0$, we determine the probability distribution of $d(X)$ when $H_0$ is true and then the critical region with significance level $\alpha$.
+**Definition** A null hypothesis is a statement about parameters $\theta$ of a population distribution. If the null hypothesis, along with existing information on $\theta$, completely determines the distribution, then its a simple hypothesis. Otherwise, its a composite hypothesis. A test for a null hypothesis could be specified by defining a "critical region" $C\subset \mathbb{R}^n$ so that one rejects the null hypothesis if $(X_1,...,X_n)\in C$ and one accepts the null hypothesis if $(X_1,...,X_n)\notin C$. Type I error, is said to result if the test incorrectly calls for rejecting $H_0$ when it is indeed correct. Type II error, results if the test calls for accepting $H_0$ when it is false. One way to measure type II errors is the operating characteristic (OC) curve, the probability that null hypothesis is accepted when its false. $p$-value of a test sample is the probability of getting results at least as extreme as the test sample under the null hypothesis. If the $p$-value is less than the significance level $\alpha$, then the null hypothesis is rejected. A common approach to developing a test of $H_0$ at level of significance $\alpha$, is to start by determining a point estimator of $\theta$ such as $d(X)$. To determine how “far away” it need be to justify rejection of $H_0$, we determine the probability distribution of $d(X)$ when $H_0$ is true and then the critical region with significance level $\alpha$.
 
 **Theorem** Given a sample $X_1,...,X_n$ from a normal population. 
 1. If $\mu$ is unknown and $\sigma$ is known, reject $\mu=\mu_0$ with confidence level $\alpha$ if $\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\notin(\pm z_{\alpha/2})$; reject "$\mu\leq\mu_0$" if $\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\notin(-\infty,z_{\alpha})$; reject $\mu\geq\mu_0$ if $\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\notin(-z_{\alpha},\infty)$.
@@ -148,10 +148,25 @@ title: "probability theory review"
 
 4. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$ and $\mu_y$ are unknown and $\sigma_x$ and $\sigma_y$ are known, then reject $\mu_x=\mu_y$ if $\frac{\overline{X}-\overline{Y}}{\sqrt{\sigma_x^2/n+\sigma_y^2/m}}\notin(\pm z_{\alpha/2})$.
 
-5. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, and $\sigma_x^2=\sigma^2=\sigma_y^2$ are unknown, then reject $\mu_x=\mu_y$ if $\frac{(\overline{X}-\overline{Y})}{\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{S_x^2(n-1)+S_y^2(m-1)}{(m+n-2)}}}$.
+5. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, and $\sigma_x^2=\sigma^2=\sigma_y^2$ are unknown, then reject $\mu_x=\mu_y$ if $\frac{(\overline{X}-\overline{Y})}{\sqrt{(\frac{1}{n}+\frac{1}{m})\frac{S_x^2(n-1)+S_y^2(m-1)}{(m+n-2)}}}\notin(\pm t_{n+m-2,\alpha/2})$.
 
+6. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, $\sigma_x^2$, $\sigma_y^2$ are unknown and $m$ and $n$ are large, then reject $\mu_x=\mu_y$ if $\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S_x^2}{n}+\frac{S_y^2}{m}}\notin(\pmZ_{\alpha/2})$.
 
+7. If $\mu$ and $\sigma$ are both unknown, then reject $\sigma^2=\sigma_0^2$ if $\frac{(n-1)S^2}{\sigma_0^2}\notin(\chi_{n-1,1-\alpha/2}^2,\chi_{n-1,\alpha/2}^2)$.
 
+8. Given sample $Y_1,...,Y_m$ from another normal population, if $\mu_x$, $\mu_y$, $\sigma_x^2$, $\sigma_y^2$ are unknown, then reject $\sigma_x^2=\sigma_y^2$ if $\frac{S_x^2}{S_y^2}\notin(F_{1-\alpha/2,n-1,m-1},F_{\alpha/2,n-1,m-1})$. (because $\frac{S_x^2}{\sigma_x^2}\sim\chi_{n-1}^2/(n-1)$.)
+
+**Theorem** Given a sample $X_1,...,X_n$ from a Bernoulli population with $p$ unknown:
+
+1. Reject the hypothesis $p\neq p_0$ with $\alpha$ significance if $p$-value $P(binom(n,p_0)\geq x)\leq \alpha/2$ or $P(binom(n,p_0)\leq x)\leq \alpha/2$; reject the hypothesis $p\leq p_0$ with $\alpha$ significance if $p$-value $P(binom(n,p_0)\geq X)\leq \alpha$; reject the hypothesis $p\geq p_0$ with $\alpha$ significance if $p$-value $P(binom(n,p_0)\leq  X)\leq \alpha$; (reject the null hypothesis that $p\geq p_0$ if the probability of $binom(x,p)\geq binom(x,p_0)$ is $\leq \alpha$)
+
+2. If $n$ is large, an approximate significance level $\alpha$ test would reject $p\leq p_0$ if $\frac{\overline{X}-np_0}{\sqrt{np_0(1-p_0)}}\geq z_\alpha$.
+
+3. Given a sample $Y_1,...,Y_m$ from another Bernoulli sample with $p'$ unknown, reject the hypothesis that $p=p'$ if $P(hypergeometric(n,m,x+y)\geq x)\leq \alpha/2$ or $P(hypergeometric(n,m,x+y)\leq x)\leq\alpha/2$ with $x=\sum X_i$ and $y=\sum Y_i$.
+
+**Theorem** Given a sample $X_1,...,X_n$ from a Poisson population with $\lambda$ unknown:
+
+1. Reject the hypothesis $\lambda=\lambda_0$ if $P_{\lambda_0}(X\geq x)\leq\alpha/2$ or $P_{\lambda_0}(X\leq x)\leq\alpha/2$. 
 
 
 
