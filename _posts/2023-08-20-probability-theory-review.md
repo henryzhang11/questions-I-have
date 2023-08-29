@@ -160,7 +160,7 @@ title: "probability theory review"
 
 1. Reject the hypothesis $p\neq p_0$ with $\alpha$ significance if $p$-value $P(binom(n,p_0)\geq x)\leq \alpha/2$ or $P(binom(n,p_0)\leq x)\leq \alpha/2$; reject the hypothesis $p\leq p_0$ with $\alpha$ significance if $p$-value $P(binom(n,p_0)\geq X)\leq \alpha$; reject the hypothesis $p\geq p_0$ with $\alpha$ significance if $p$-value $P(binom(n,p_0)\leq  X)\leq \alpha$; (reject the null hypothesis that $p\geq p_0$ if the probability of $binom(x,p)\geq binom(x,p_0)$ is $\leq \alpha$)
 
-2. If $n$ is large, an approximate significance level $\alpha$ test would reject $p\leq p_0$ if $\frac{\overline{X}-np_0}{\sqrt{np_0(1-p_0)}}\geq z_\alpha$.
+2. If $n$ is large, an approximate significance level $\alpha$ test would reject $p\leq p_0$ if $\frac{X-np_0}{\sqrt{np_0(1-p_0)}}\geq z_\alpha$.
 
 3. Given a sample $Y_1,...,Y_m$ from another Bernoulli sample with $p'$ unknown, reject the hypothesis that $p=p'$ if $P(hypergeometric(n,m,x+y)\geq x)\leq \alpha/2$ or $P(hypergeometric(n,m,x+y)\leq x)\leq\alpha/2$ with $x=\sum X_i$ and $y=\sum Y_i$.
 
